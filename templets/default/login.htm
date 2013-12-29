@@ -1,0 +1,204 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title><?php echo $cfg_webname; ?>- 会员登录</title>
+
+</head>
+
+
+
+
+<body>
+<?php pasterTempletDiy("default/head.htm");?>
+
+<div class="center">
+<div class="g_wrap">
+<div class="g_cont autohei">
+	<div class="g_login autohei">
+    
+    	<!--登录-->
+      <div class="g_logincont right g_denglubox" >
+        <div align="center"><img src="../templets/default/images/g_logintxt.png" /></div>
+        <form name='form1'>
+          <ul>
+            <li>
+              <input type="text" class="g_inpt1 txtUsername" onblur="if(this.value==''){this.value='手机号码';}" onfocus="if(this.value=='手机号码'){this.value='';}" value="手机号码" />
+            </li>
+            <li class="g_pas autohei">
+              <input type="password"  class="g_inpt2 left txtPassword1" id="txtUsername" onblur="if(this.value==''){this.value='登录密码';}" onfocus="if(this.value=='登录密码'){this.value='';}" value=""   placeholder="登录密码"/>
+              <span id="btnSignCheck" class="g_btn1 left login_go"></span>
+            </li>
+           <!-- <li class="g_save"> <span class="g_check"><img src="images/g_checkon.png"></span>记住用户名 </li>-->
+          </ul>
+        </form>
+        <div class="autohei g_findcode"><span class="g_blue right"><a href="#" class="g_zhucbtn">新用户注册>></a></span> </div>
+      </div>
+      
+      <!--注册-->
+      <div class="g_logincont right g_zhucebox" style="display:none;">
+        <div align="center"><img src="../templets/default/images/g_regesttxt.png" /></div>
+        <form name='form2' method='POST' action='index_do.php'>
+          <ul>
+            <li>
+            
+              <input type="text" class="g_inpt1 txtUsername" onblur="if(this.value==''){this.value='手机号码';}" onfocus="if(this.value=='手机号码'){this.value='';}"  value="手机号码" />
+            </li>
+            <li  class="g_pas2">
+              <input type="password" class="g_inpt2 txtPassword"  onblur="if(this.value==''){this.value='登录密码';}" onfocus="if(this.value=='登录密码'){this.value='';}"  value="" placeholder="输入密码"/>
+            </li>
+            <li class="g_pas2" >
+              <input type="password"  class="g_inpt2 secPassword" onblur="if(this.value==''){this.value='确认密码';}" onfocus="if(this.value=='确认密码'){this.value='';}"  value=""  placeholder="确认密码" />
+            </li>
+            <li class="" style="color:#fff;">
+              <span class="yan">验证码：</span><input type="text" id="verify"  class="verify" ><span id="getverify">获取短信验证码</span>
+              
+            </li>
+            <li style="text-align:center">
+              <a href="javascript:;" ><img src="../templets/default/images/g_zhuce.png" class="g_zhuce left"> </a>
+               <a href="javascript:;" ><span class="g_denglu right">返回登录</span> </a>
+            </li>
+          </ul>
+        </form>
+      </div>
+      
+      
+    </div>
+</div>
+</div>
+	<div class="push"></div>
+</div>
+
+
+<?php pasterTempletDiy("default/footer.htm");?>
+
+
+<script>
+	$(function(){
+			$(".g_check").click(
+				function(){
+					if($(this).find("img").attr("src")=="images/g_checkon.png")	
+					{
+						$(this).find("img").attr("src","images/g_checkoff.png")
+					}
+					else
+					{
+						$(this).find("img").attr("src","images/g_checkon.png")
+					}
+				}
+			)
+			
+			$(".g_zhucbtn").click(function(){
+					$(this).parents(".g_denglubox").slideUp(100,function(){
+						$(this).siblings(".g_zhucebox").slideDown(100)	
+					})
+			})
+			
+			$(".g_denglu").click(function(){
+					$(this).parents(".g_zhucebox").slideUp(100,function(){
+						$(this).siblings(".g_denglubox").slideDown(100)	
+					})
+			})
+			
+		// 输入密码
+		
+		
+			
+			
+	})
+</script>
+
+<script type="text/javascript">
+	$(function(){
+		
+		var ul = "templets/agency.php";	 //代理服务器文件
+		var sever_url = "http://121.199.12.139/cheshenOA"
+		
+		// 获取短信
+		$("#getverify").click(function(){
+			//提交的地址，post传入的参数
+			var tel = $(".g_zhucebox .txtUsername").val()
+			
+			$.post(ul,{	 
+				'server_url' : sever_url + '/Api/Send/register_send',
+				 'telephone' : tel
+			},function(obj){
+				alert(obj.msg);
+			},'json');	
+		})	
+		// 注册按钮
+		$(".g_zhuce").click(function(){
+			var tel = $(".g_zhucebox .txtUsername").val();
+			var pas = $(".g_zhucebox .txtPassword").val();
+			var secpas = $(".g_zhucebox .secPassword").val();
+			var verify = $(".g_zhucebox .verify").val();
+			
+			$(".g_denglubox").slideUp(100,function(){
+					$(".g_zhucebox").slideDown(100)	
+			})
+			
+			$.post(ul,{	 
+				'server_url' : sever_url + '/Api/Login/register',
+				 'account' : tel,
+				 'password' : pas,
+				 'password_confirm' : secpas,
+				 'verify' : verify
+			},function(obj){
+				if (obj.status == 0) {
+					alert(obj.msg);
+					$(".g_zhucebox").slideUp(100,function(){
+						$(".g_denglubox").slideDown(100)	
+					})
+				} else {
+					alert(obj.msg);	
+				}
+			},'json');	
+		})
+		// 登录按钮
+		$(".login_go").click(function(){
+			var tel = $(".g_denglubox .txtUsername").val();
+			var pas = $(".g_denglubox .txtPassword1").val();
+			$.post(ul,{	 
+			'server_url' : sever_url + '/Api/Login/login',
+			 'account' : tel,
+			 'password' : pas
+			},function(obj){
+				if (obj.status == 0) {
+					//alert(obj.data.user_key);
+					
+					 
+
+					alert(111);
+					$(".g_zhucebox").slideUp(100,function(){
+						$(".g_denglubox").slideDown(100)	
+					})
+				} else {
+					alert(111);	
+				}
+			},'json');	
+		})
+		
+		
+		
+		
+	})
+	
+</script>
+
+
+<!–[if lt IE9]> 
+<script> 
+   (function() {
+     if (! 
+     /*@cc_on!@*/
+     0) return;
+     var e = "abbr, article, aside, audio, canvas, datalist, details, dialog, eventsource, figure, footer, header, hgroup, mark, menu, meter, nav, output, progress, section, time, video".split(', ');
+     var i= e.length;
+     while (i--){
+         document.createElement(e[i])
+     } 
+})() 
+</script>
+<![endif]–>
+</body>
+</html>

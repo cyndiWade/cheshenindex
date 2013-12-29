@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>{dede:global.cfg_webname/}</title>
+</head>
+
+<body>
+{dede:include filename='head.htm'/}
+
+<div class="center">
+  <div class="dc_bg2">
+   <div class="newcont">
+   <div class="position">
+   	<p>当前位置： {dede:field name='position'/}<!--<a href="/">关于车神</a><span class="yellow"> > 新闻动态</span>--></p>
+   </div>
+     <div class="autohei new_tj">
+     	<div class="left">
+        	<span class="new_pic"><img src="{dede:global.cfg_templets_skin/}/images/n_p1.jpg"/></span>
+            <div class="blank"></div>
+      	    <div class="new_body">
+     	<h1 align="center" class="yellow">{dede:field.title/}</h1>
+        <div align="center" class="from">添加时间:{dede:field.pubdate function="MyDate('Y-m-d H:i',@me)"/}　{dede:field.source/}　阅读：<script src="{dede:field name='phpurl'/}/count.php?view=yes&aid={dede:field name='id'/}&mid={dede:field name='mid'/}" type='text/javascript' language="javascript"></script>次　来源：{dede:field.writer/}</div>
+        <p>{dede:field.body/}</p>
+          </div>
+        </div>
+        <div class="right tjxw_list">
+        	<h4 class="yellow">推荐新闻</h4>
+            <ul>
+            {dede:arclist typeid='6' row='6' titlelen='28' flag='c'}
+            	<li><a href="[field:arcurl/]">[field:title/]</a></li>
+            {/dede:arclist}
+            </ul>
+        </div>
+     </div>
+     
+  </div>
+  </div>
+
+	<div class="push"></div>
+</div>
+
+{dede:include filename='footer.htm'/}
+</body>
+</html>

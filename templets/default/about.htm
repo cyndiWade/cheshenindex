@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>{dede:global.cfg_webname/}</title>
+</head>
+
+<body>
+<!--fly_css-->
+{dede:include filename='head.htm'/}
+
+<div class="center">
+    <div class="dc_bgbox">
+      <div class="dc_bg2">
+        <div class="newcont">
+          <div class="lianxi" style="padding-bottom:50px;">
+            <h2 class="tit1">公司简介</h2>
+            <div class="blank"></div>
+            <div class="about_txt1">
+            {dede:channelartlist typeid='6,99'}
+              <P>{dede:field.content/}</P>
+             {/dede:channelartlist} 
+            </div>
+          </div>
+        </div>
+        <div class="team">
+          <h2 class="tit1">团队风采</h2>
+          <ul style="margin:0; padding-bottom:20px;" id="team">
+          {dede:arclist typeid='6' row='3' imgwidth='212' imgheight='172' addfields='body' channelid='1'}
+            <li> <span >[field:image/]</span>
+              <div class="autohei">
+                <h6>[field:title/]</h6>
+                <P>[field:body function='cn_substr(strip_tags(@me), 500)'/]</P>
+              </div>
+            </li>
+            {/dede:arclist}
+            <!--<li class="teamlist2"> <span><img src="{dede:global.cfg_templets_skin/}/images/team_p1.jpg"></span>
+              <div class="autohei">
+                <h6>董事长：张倬赫（ Hyuk Z）</h6>
+                <P>清华大学EMBA工商管理硕士，  中国商社、智囊团创始人，资深域名投资专家和实业资本运营高手。2008年，进入汽车行业，斥巨资收购车神品牌和域名，  为车神成为中国汽车综合服务运营商第一品牌奠定了基础。2010年，车神租车业务正式启动，专注于高端车租赁市场。2013年，正式成立车神集团，致力于促进中国汽车行业的发展与创新。</P>
+              </div>
+            </li>
+            <li> <span><img src="{dede:global.cfg_templets_skin/}/images/team_p1.jpg"></span>
+              <div class="autohei">
+                <h6>董事长：张倬赫（ Hyuk Z）</h6>
+                <P>清华大学EMBA工商管理硕士，  中国商社、智囊团创始人，资深域名投资专家和实业资本运营高手。2008年，进入汽车行业，斥巨资收购车神品牌和域名，  为车神成为中国汽车综合服务运营商第一品牌奠定了基础。2010年，车神租车业务正式启动，专注于高端车租赁市场。2013年，正式成立车神集团，致力于促进中国汽车行业的发展与创新。</P>
+              </div>
+            </li>-->
+          </ul>
+        </div>
+      </div>
+    </div>
+	<div class="push"></div>  
+</div>
+<script type="text/javascript">
+	$(function () {
+		var team = $('#team');
+		team.children().eq(1).addClass('teamlist2'); 		
+	});
+</script>
+
+{dede:include filename='footer.htm'/}
+</body>
+</html>

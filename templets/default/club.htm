@@ -1,0 +1,231 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>{dede:global.cfg_webname/}</title>
+<link href="{dede:global.cfg_templets_skin/}/css/bootstrap.min.css" rel="stylesheet" media="screen">
+<link href="{dede:global.cfg_templets_skin/}/css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
+<link href="{dede:global.cfg_templets_skin/}/css/base.css" rel="stylesheet">
+
+<script src="{dede:global.cfg_templets_skin/}/js/jquery.min.1.9.1.js"></script>
+
+<script>
+	$(function(){
+			 
+			$(".cannot").click(
+				function(){
+					alert("对不起，该车型暂时没有多余的车辆可供使用！")	
+				}
+			)
+			$(".dche").hover(
+				function(){
+					var i = $(this).index()	;	
+					$(".dchebox").eq(i).fadeIn().siblings().hide()
+					$(".dc_dotp img").css("opacity","0.5").eq(i).css("opacity","1")
+				}
+				
+			)
+			
+	})
+</script>
+<!–[if lt IE9]>
+<script> 
+   (function() {
+     if (! 
+     /*@cc_on!@*/
+     0) return;
+     var e = "abbr, article, aside, audio, canvas, datalist, details, dialog, eventsource, figure, footer, header, hgroup, mark, menu, meter, nav, output, progress, section, time, video".split(', ');
+     var i= e.length;
+     while (i--){
+         document.createElement(e[i])
+     } 
+})() 
+</script>
+<![endif]–>
+
+</head>
+
+<body>
+<!--fly_css-->
+{dede:include filename='head.htm'/}
+<div class="clear"></div>
+<div class="bg">
+<div class="dc_wrap">
+  <div class="dc_bg">
+
+	<!--轮播图插件 -->
+
+
+ 
+
+    <div class="dc_cont autohei"  id="adam-eff">
+      <div class="dc_conleft left"  id="adam-tabsContent">
+      
+      {dede:channelartlist typeid='15,17,18,19,20'}
+
+        <div class="dchebox adam-tabs-list">
+          <div class="dc_txt">
+			 <p class="fb f20 mb5">[车神{dede:field name='typename'/}]</p><p class="f16">{dede:field.description/}</p>
+		  </div>
+
+          <div class="adam-scroll">
+            
+              <div class="adam-big-img">
+              	<ul>
+					  
+				</ul>
+              </div>
+			  <dl class="adam-small-imglist"> 
+				 
+			  </dl>
+          </div>
+        </div>
+
+
+
+        {/dede:channelartlist}
+       
+      </div>
+
+<!-- 
+		<div class="dc_cont autohei" id="adam-eff">
+
+			<div class="dc_conleft left" id="adam-tabsContent">
+				
+				
+				  <div class="adam-tabs-list dchebox">
+					
+					<div class="dc_txt">	
+					 <p class="fb f20 mb5">[车神{dede:field name='typename'/}]</p><p class="f16">{dede:field.description/}</p>
+					</div>
+					
+					<div class="adam-scroll">		  
+						<div class="adam-big-img">
+						  <ul>
+							<li><a href="http://www.17sucai.com/"><img src="http://yunqiserver.xicp.net/files/cheshenOA/images/20131226/52bbc9e7db9f0.png" height="292" width="564"></a></li>
+							<li><a href="http://www.17sucai.com/"><img src="http://yunqiserver.xicp.net/files/cheshenOA/images/20131226/52bbc9e7e2926.png" height="292" width="564"></a></li>
+							<li><a href="http://www.17sucai.com/"><img src="http://yunqiserver.xicp.net/files/cheshenOA/images/20131226/52bbca38acf6b.png" height="292" width="564"></a></li>
+							<li><a href="http://www.17sucai.com/"><img src="http://yunqiserver.xicp.net/files/cheshenOA/images/20131226/52bbca38b497b.png" height="292" width="564"></a></li>
+							<li><a href="http://www.17sucai.com/"><img src="http://yunqiserver.xicp.net/files/cheshenOA/images/20131226/52bbca85952ea.png" height="292" width="564"></a></li>
+							<li><a href="http://www.17sucai.com/"><img src="http://yunqiserver.xicp.net/files/cheshenOA/images/20131226/52bbca859c11f.png" height="292" width="564"></a></li>
+							<li><a href="http://www.17sucai.com/"><img src="http://yunqiserver.xicp.net/files/cheshenOA/images/20131226/52bbca499c2e8.png" height="292" width="564"></a></li>
+						  </ul>
+						</div>
+						<dl class="adam-small-imglist">
+						  <dd><a><img src="http://yunqiserver.xicp.net/files/cheshenOA/images/20131226/52bbca499c2e8.png" height="54" width="103"></a></dd>
+						  <dd><a><img src="http://yunqiserver.xicp.net/files/cheshenOA/images/20131226/52bbca499c2e8.png" height="54" width="103"></a></dd>
+						  <dd><a><img src="http://yunqiserver.xicp.net/files/cheshenOA/images/20131226/52bbca499c2e8.png" height="54" width="103"></a></dd>
+						  <dd><a><img src="http://yunqiserver.xicp.net/files/cheshenOA/images/20131226/52bbca499c2e8.png" height="54" width="103"></a></dd>
+						  <dd><a><img src="http://yunqiserver.xicp.net/files/cheshenOA/images/20131226/52bbca499c2e8.png" height="54" width="103"></a></dd>
+						  <dd><a><img src="http://yunqiserver.xicp.net/files/cheshenOA/images/20131226/52bbca499c2e8.png" height="54" width="103"></a></dd>
+						  <dd><a><img src="http://yunqiserver.xicp.net/files/cheshenOA/images/20131226/52bbca499c2e8.png" height="54" width="103"></a></dd>
+						</dl>
+					  </div>
+
+				  </div>
+					
+			
+			</div>
+			
+-->
+
+			 <dl class="dc_conright right" id="adam-tabs">
+				<div class="dc_dwp1"><img src="{dede:global.cfg_templets_skin/}/images/dc-tbg1.png"></div>
+				<div class="dc_dwp1"><img src="{dede:global.cfg_templets_skin/}/images/dc_tbg.png" usemap="#Map">
+				  <map name="Map">
+					<area shape="poly" coords="59,12,51,38,45,61,33,106,45,111,57,116,66,121,76,129,87,138,156,69,144,57,125,43,102,29,78,19"  class="dche" href="javascript:;">
+					<area shape="poly" coords="169,80,100,149,109,159,116,170,123,182,128,194,132,204,226,179,218,154,207,129,192,107,181,93" class="dche" href="javascript:;">
+					<area shape="poly" coords="229,197,135,223,137,239,138,253,138,268,135,285,230,312,235,289,237,263,237,235,233,214"  class="dche" href="javascript:;">
+					<area shape="poly" coords="225,329,131,304,125,319,119,332,112,343,99,359,169,428,191,402,208,375,218,350"  class="dche" href="javascript:;">
+					<area shape="poly" coords="157,440,88,371,78,379,69,386,58,392,46,397,33,402,59,497,90,486,110,475,125,465,137,457,147,449" class="dche" href="javascript:;">
+				  </map>
+				</div>
+				
+					<dd class="dc_dj1 dc_dotp"><a href="javascript:;"><img style="opacity:1" src="{dede:global.cfg_templets_skin/}/images/dc_dotp1.png"/></a></h2>
+				   
+					<dd class="dc_dj2 dc_dotp"><a href="javascript:;"><img src="{dede:global.cfg_templets_skin/}/images/dc_dotp2.png"/></a></dd>
+					 
+					<dd class="dc_dj3 dc_dotp"><a href="javascript:;"><img src="{dede:global.cfg_templets_skin/}/images/dc_dotp3.png"/></a></dd>
+					
+					<dd class="dc_dj4 dc_dotp"><a href="javascript:;"><img src="{dede:global.cfg_templets_skin/}/images/dc_dotp4.png"/></a></dd>
+					 
+					<dd class="dc_dj5 dc_dotp"><a href="javascript:;"><img src="{dede:global.cfg_templets_skin/}/images/dc_dotp5.png"/></a></dd>
+			 </dl> 
+
+		</div>
+
+
+
+
+
+    </div>
+  </div>
+</div>
+</div>
+{dede:include filename='footer.htm'/}
+
+<!-- 提交订单层 -->
+<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="width:518px;">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+<h3 id="myModalLabel" align="center">用车申请</h3>
+</div>
+<div class="modal-body">
+
+
+<form method="post" class="form-horizontal" action="" style="margin:0;">
+	<input type="text" value="" class="cars_id"/>
+	<table width="100%">
+    	<tr height="30">
+        	<td align="right" width="91">车型：</td><td class="cars_name">路虎超级跑车</td><td align="right" width="120">会员级别：</td><td>车神领袖会员</td>            
+        </tr>
+        <tr height="50">
+        	<td align="right" width="91">用车时间：</td><td width="100"><div class="input-append date form_datetime"   data-link-field="dtp_input1">
+                    <input size="16" type="text" value="" style="width:128px;" readonly>
+                    <!--<span class="add-on"><i class="icon-remove"></i></span>-->
+					<span class="add-on"><i class="icon-th"></i></span>
+                </div><!--<input name="member.birth"  type="text" value="" size="16" style="width:100px;" />--></td><td align="right" width="120">剩余使用天数：</td><td>68天</td>
+        </tr>
+        <tr height="50">
+        	<td align="right" width="91">还车时间：</td><td><div class="input-append date form_datetime"  data-link-field="dtp_input1">
+                    <input size="16" type="text" value="" style="width:128px;" readonly>
+                    <!--<span class="add-on"><i class="icon-remove"></i></span>-->
+					<span class="add-on"><i class="icon-th"></i></span>
+                </div><!--<input name="member.birth"  type="text" value="" size="16" style="width:100px;" />--></td><td></td><td></td>
+        </tr>
+        <tr height="30">
+        	<td align="right" width="91">天数：</td><td>50天</td>
+        </tr>
+        <tr height="30">
+        	<td align="right" width="100">是否需要司机：</td><td colspan="3"><span style="margin-right:20px;"><input type="radio" name="yes" />是</span><span><input type="radio" name="yes" checked="checked" />否</span></td>
+        </tr>
+        <tr>
+        	<td colspan="4">备注：</td>
+        </tr>
+        <tr>
+        	<td colspan="4" align="center"><textarea style="width:97%;"></textarea></td>
+        </tr>
+    </table>
+</form>
+
+
+</div>
+<div class="modal-footer" style="text-align:center;">
+
+<button class="btn btn-primary btn_sub" style="width:85px;">提交</button>
+
+</div>
+</div>
+
+
+
+<script src="{dede:global.cfg_templets_skin/}/js/jquery.min.1.9.1.js"></script>
+<script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
+<script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/bootstrap-datetimepicker.zh-CN.js" charset="UTF-8"></script>
+<script src="{dede:global.cfg_templets_skin/}/js/huandeng.js"></script>
+
+
+<script src="{dede:global.cfg_templets_skin/}/js/getcars.js"></script>
+</body>
+</html>

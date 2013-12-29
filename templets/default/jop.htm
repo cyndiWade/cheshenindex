@@ -1,0 +1,59 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>{dede:global.cfg_webname/}</title>
+<script>
+	$(function(){
+		//*招聘点击js*
+		$(".zpbox h3").click(function(){
+		  if($(this).find("span").attr("class")=="dot_up2"){
+			 $(this).find("span").attr("class","dot_up1")
+			 $(this).parent("li").children(".zp_txt").slideDown()
+			 }
+		  else {
+			   $(this).find(".dot_up1").attr("class","dot_up2")
+			   $(this).parent("li").children(".zp_txt").slideUp()
+		   }
+		})
+	})
+</script>
+
+</head>
+
+<body>
+{dede:include filename='head.htm'/}
+<div class="center">
+<div class="bg">
+	<div class="dc_wrap">
+  <div class="dc_bg2">
+   <div class="newcont">
+      <div class="lianxi">
+      	<h2 class="tit1">人才招聘</h2>
+        <div class="zpbox">
+        	<div class="zpbg1">
+        		<ul>
+                {dede:arclist typeid='12' row='10' titlelen='30'}
+                	<li>
+                    	<h3><span class="dot_up1">&nbsp;</span>[field:title/]</h3>
+                       <div class="zp_txt">
+                       	 <p>[field:id runphp='yes'] $aid = @me; $row = $GLOBALS['dsql']->GetOne("Select body From `dede_addonarticle` where aid='$aid' "); @me = "{$row['body']}";[/field:id] </p>
+                       </div>
+                    </li>
+                 {/dede:arclist}
+                </ul>
+            </div>
+            <div align="center"><img src="{dede:global.cfg_templets_skin/}/images/bgbot.png"/></div>
+        </div>
+      </div>
+     
+     
+  </div>
+  </div>
+</div>
+</div>
+	<div class="push"></div>
+</div>
+{dede:include filename='footer.htm'/}
+</body>
+</html>

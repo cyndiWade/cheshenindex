@@ -1,0 +1,188 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>用户申请试驾</title>
+
+<link href="{dede:global.cfg_templets_skin/}/css/bootstrap.min.css" rel="stylesheet" media="screen">
+<link href="{dede:global.cfg_templets_skin/}/css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
+<link href="{dede:global.cfg_templets_skin/}/css/base.css" rel="stylesheet">
+
+<script src="{dede:global.cfg_templets_skin/}/js/jquery.min.1.9.1.js"></script>
+<script>
+	$(function(){
+		
+		
+			$(".cannot").click(
+				function(){
+					alert("对不起，该车型暂时没有试驾活动！")	
+				}
+			)
+			
+			
+			$(".g_check").click(
+				function(){
+					if($(this).find("img").attr("src")=="{dede:global.cfg_templets_skin/}/images/g_checkon.png")	
+					{
+						$(this).find("img").attr("src","{dede:global.cfg_templets_skin/}/images/g_checkoff.png")
+					}
+					else
+					{
+						$(this).find("img").attr("src","{dede:global.cfg_templets_skin/}/images/g_checkon.png")
+					}
+				}
+			)
+			
+			$(".dche").hover(
+				function(){
+					var i = $(this).index()	;	
+					$(".dchebox").eq(i).fadeIn().siblings().hide()
+					$(".dc_dotp img").css("opacity","0.5").eq(i).css("opacity","1")
+				}
+				
+			)
+			
+	})
+</script>
+<!–[if lt IE9]>
+<script> 
+   (function() {
+     if (! 
+     /*@cc_on!@*/
+     0) return;
+     var e = "abbr, article, aside, audio, canvas, datalist, details, dialog, eventsource, figure, footer, header, hgroup, mark, menu, meter, nav, output, progress, section, time, video".split(', ');
+     var i= e.length;
+     while (i--){
+         document.createElement(e[i])
+     } 
+})() 
+</script>
+<![endif]–>
+
+</head>
+
+<body>
+<!--fly_css-->
+{dede:include filename='head.htm'/}
+<div class="clear"></div>
+<div class="dc_wrap">
+ <div class="dc_bg">
+    <div class="dc_cont autohei">
+      <div class="dc_conleft left">
+        <div class="dchebox">
+          <div class="dc_txt"><img src="{dede:global.cfg_templets_skin/}/images/sj_pic01.png"></div>
+          <div class="main_view">
+            <div class="window autohei">
+              <div class="image_reel"> <a href="#" class="cannot"><img src="{dede:global.cfg_templets_skin/}/images/dc_p1_3.png"></a>  </div>
+            </div>
+           
+          </div>
+        </div>
+        <div class="dchebox" style="display:none;">
+          <div class="dc_txt"><img src="{dede:global.cfg_templets_skin/}/images/sj_pic02.png"></div>
+          <div class="main_view">
+            <div class="window autohei">
+              <div class="image_reel"> <a href="#"  class="cannot"><img src="{dede:global.cfg_templets_skin/}/images/dc_p2_3.png"></a>  </div>
+            </div>
+          
+          </div>
+        </div>
+        <div class="dchebox" style="display:none;">
+          <div class="dc_txt"><img src="{dede:global.cfg_templets_skin/}/images/sj_pic03.png"></div>
+          <div class="main_view">
+            <div class="window autohei">
+              <div class="image_reel"> <a  href="#myModal" data-toggle="modal" ><img src="{dede:global.cfg_templets_skin/}/images/dc_p3.png"></a>  </div>
+            </div>
+            
+          </div>
+        </div>
+        <div class="dchebox" style="display:none;">
+          <div class="dc_txt"><img src="{dede:global.cfg_templets_skin/}/images/sj_pic04.png"></div>
+          <div class="main_view">
+            <div class="window autohei">
+              <div class="image_reel"> <a href="#"  class="cannot"><img src="{dede:global.cfg_templets_skin/}/images/sj_p4_1.png"></a>  </div>
+            </div>
+            
+          </div>
+        </div>
+        <div class="dchebox" style="display:none;">
+          <div class="dc_txt"><img src="{dede:global.cfg_templets_skin/}/images/sj_pic05.png"  class="cannot"></div>
+          <div class="main_view">
+            <div class="window autohei">
+              <div class="image_reel"> <a href="#" class="cannot"><img src="{dede:global.cfg_templets_skin/}/images/dc_p5_2.png"></a> </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+      <div class="dc_conright right">
+        <div class="dc_dwp1"><img src="{dede:global.cfg_templets_skin/}/images/dc-tbg1.png"></div>
+        <div class="dc_dwp1"><img src="{dede:global.cfg_templets_skin/}/images/dc_tbg.png" usemap="#Map">
+          <map name="Map">
+            <area shape="poly" coords="59,12,51,38,45,61,33,106,45,111,57,116,66,121,76,129,87,138,156,69,144,57,125,43,102,29,78,19"  class="dche" href="javascript:;">
+            <area shape="poly" coords="169,80,100,149,109,159,116,170,123,182,128,194,132,204,226,179,218,154,207,129,192,107,181,93" class="dche" href="javascript:;">
+            <area shape="poly" coords="229,197,135,223,137,239,138,253,138,268,135,285,230,312,235,289,237,263,237,235,233,214"  class="dche" href="javascript:;">
+            <area shape="poly" coords="225,329,131,304,125,319,119,332,112,343,99,359,169,428,191,402,208,375,218,350"  class="dche" href="javascript:;">
+            <area shape="poly" coords="157,440,88,371,78,379,69,386,58,392,46,397,33,402,59,497,90,486,110,475,125,465,137,457,147,449" class="dche" href="javascript:;">
+          </map>
+        </div>
+        <h2 class="dc_dj1 dc_dotp"><a href="#"><img style="opacity:1" src="{dede:global.cfg_templets_skin/}/images/sj_dotp1.png"/></a></h2>
+        <h2 class="dc_dj2 dc_dotp"><a href="#"><img src="{dede:global.cfg_templets_skin/}/images/sj_dotp2.png"/></a></h2>
+        <h2 class="dc_dj3 dc_dotp"><a href="#"><img src="{dede:global.cfg_templets_skin/}/images/sj_dotp3.png"/></a></h2>
+        <h2 class="dc_dj4 dc_dotp"><a href="#"><img src="{dede:global.cfg_templets_skin/}/images/sj_dotp4.png"/></a></h2>
+        <h2 class="dc_dj5 dc_dotp"><a href="#"><img src="{dede:global.cfg_templets_skin/}/images/sj_dotp5.png"/></a></h2>
+      </div>
+    </div>
+  </div
+></div>
+{dede:include filename='footer.htm'/}
+
+<!-- Modal -->
+<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="width:470px;">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+<h3 id="myModalLabel" align="center">申请试驾</h3>
+</div>
+<div class="modal-body">
+<form method="post" action="">
+	<table width="65%" style="margin:0 auto;">
+    	<tr height="30">
+        	<td align="right" width="91">车型：</td><td><select class="span2"><option>路虎超级跑车</option><option>法拉利</option></select></td>            
+        </tr>
+        <tr height="30">
+        	<td align="right">称谓：</td><td><select class="span2"><option>先生</option><option>女士</option></select></td>            
+        </tr>
+        <tr height="30">
+        	<td align="right">驾龄：</td><td><select class="span2"><option>2年</option><option>3年</option></select></td>            
+        </tr>
+        <tr height="50">
+        	<td align="right" width="91">姓名：</td><td><input class="span2" name="member.birth"  type="text" value="" size="16"  /></td>
+        </tr>
+        <tr height="50">
+        	<td align="right" width="91">手机：</td><td><input class="span2" name="member.birth"  type="text" value="" size="16" /></td><td></td><td></td>
+        </tr>
+        <tr height="50">
+        	<td align="right" width="91">E-mail：</td><td><input class="span2" name="member.birth"  type="text" value="" size="16" /></td><td></td><td></td>
+        </tr>
+        <tr height="50">
+        	<td align="right" width="91">试驾卡号：</td><td><input class="span2" name="member.birth"  type="text" value="" size="16" /></td><td></td><td></td>
+        </tr>
+        <tr height="30">
+        	<td align="right">试驾日期：</td><td><select class="span2"><option>3天以内</option><option>7天以内</option></select></td>            
+        </tr>        
+    </table>
+</form>
+</div>
+<div class="modal-footer" style="text-align:center;">
+<!--<button class="btn" data-dismiss="modal" aria-hidden="true">关闭</button>-->
+<button class="btn btn-primary" style="width:85px;">提交</button>
+</div>
+</div>
+
+
+
+<script src="{dede:global.cfg_templets_skin/}/js/jquery.min.1.9.1.js"></script>
+<script src="{dede:global.cfg_templets_skin/}/js/bootstrap-modal.js"></script>
+<script src="{dede:global.cfg_templets_skin/}/js/bootstrap-transition.js"></script>	
+</body>
+</html>
