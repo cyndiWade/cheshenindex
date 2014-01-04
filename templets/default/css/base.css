@@ -182,3 +182,6 @@ a:hover, a:active {border: medium none;	text-decoration: none;}
 .pr50 {padding-right: 50px;}
 .pr100 {padding-right: 100px;}
 
+/*添加样式*/
+.form_datetime input[type='text']{ padding-bottom:6px; border:#ccc 1px solid;}
+.form-horizontal input[type='radio']{vertical-align:top;vertical-align:middle\9;vertical-align:middle\0;}

@@ -25,7 +25,7 @@
 				_IDX = 0,
 				_sImgIdx = 0,
 				nBigWidth = $tabsCon.find("li:eq(0)").outerWidth(true),
-				nSmallWidth = $tabsCon.find("dd:eq(0)").outerWidth(true);
+				nSmallWidth = 80;
 			// 数据初始化
 			$tabs.eq(options.def)
 				 .addClass(options.curr);
@@ -150,4 +150,4 @@
 			return false;
 		});
 	};
-})(jQuery);
+})(jQuery)

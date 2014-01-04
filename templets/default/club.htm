@@ -9,25 +9,7 @@
 
 <script src="{dede:global.cfg_templets_skin/}/js/jquery.min.1.9.1.js"></script>
 
-<script>
-	$(function(){
-			 
-			$(".cannot").click(
-				function(){
-					alert("对不起，该车型暂时没有多余的车辆可供使用！")	
-				}
-			)
-			$(".dche").hover(
-				function(){
-					var i = $(this).index()	;	
-					$(".dchebox").eq(i).fadeIn().siblings().hide()
-					$(".dc_dotp img").css("opacity","0.5").eq(i).css("opacity","1")
-				}
-				
-			)
-			
-	})
-</script>
+ 
 <!–[if lt IE9]>
 <script> 
    (function() {
@@ -174,36 +156,34 @@
 
 
 <form method="post" class="form-horizontal" action="" style="margin:0;">
-	<input type="text" value="" class="cars_id"/>
+	<input type="hidden" value="" class="cars_id"/>
 	<table width="100%">
     	<tr height="30">
-        	<td align="right" width="91">车型：</td><td class="cars_name">路虎超级跑车</td><td align="right" width="120">会员级别：</td><td>车神领袖会员</td>            
+        	<td align="right" width="91">车型：</td><td class="cars_name">路虎超级跑车</td><td colspan="3"></td>
         </tr>
         <tr height="50">
-        	<td align="right" width="91">用车时间：</td><td width="100"><div class="input-append date form_datetime"   data-link-field="dtp_input1">
-                    <input size="16" type="text" value="" style="width:128px;" readonly>
+        	<td align="right" width="91">用车时间：</td><td colspan="3"><div class="input-append date form_datetime"   data-link-field="dtp_input1">
+                    <input size="16" type="text" value="" class="start_schedule_time" style="width:128px;" readonly>
                     <!--<span class="add-on"><i class="icon-remove"></i></span>-->
 					<span class="add-on"><i class="icon-th"></i></span>
-                </div><!--<input name="member.birth"  type="text" value="" size="16" style="width:100px;" />--></td><td align="right" width="120">剩余使用天数：</td><td>68天</td>
+                </div><!--<input name="member.birth"  type="text" value="" size="16" style="width:100px;" />--></td> 
         </tr>
         <tr height="50">
         	<td align="right" width="91">还车时间：</td><td><div class="input-append date form_datetime"  data-link-field="dtp_input1">
-                    <input size="16" type="text" value="" style="width:128px;" readonly>
+                    <input size="16" type="text" value="" style="width:128px;" class="over_schedule_time" readonly>
                     <!--<span class="add-on"><i class="icon-remove"></i></span>-->
 					<span class="add-on"><i class="icon-th"></i></span>
                 </div><!--<input name="member.birth"  type="text" value="" size="16" style="width:100px;" />--></td><td></td><td></td>
         </tr>
+         
         <tr height="30">
-        	<td align="right" width="91">天数：</td><td>50天</td>
-        </tr>
-        <tr height="30">
-        	<td align="right" width="100">是否需要司机：</td><td colspan="3"><span style="margin-right:20px;"><input type="radio" name="yes" />是</span><span><input type="radio" name="yes" checked="checked" />否</span></td>
+        	<td align="right" width="100">是否需要司机：</td><td colspan="3"><span style="margin-right:20px;"><input type="radio" name="yes" class="ischecked" />是</span><span><input type="radio" name="yes" checked="checked" />否</span> &nbsp;&nbsp;(费用200元/天)</td>
         </tr>
         <tr>
         	<td colspan="4">备注：</td>
         </tr>
         <tr>
-        	<td colspan="4" align="center"><textarea style="width:97%;"></textarea></td>
+        	<td colspan="4" align="center"><textarea style="width:97%;" class="remarks"></textarea></td>
         </tr>
     </table>
 </form>

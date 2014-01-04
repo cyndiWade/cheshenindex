@@ -8,7 +8,8 @@
 <body>
 <!--fly_css-->
 {dede:include filename='head.htm'/}
-
+<link href="/index/templets/default/css/demo_page.css" rel="stylesheet">
+<link href="/index/templets/default/css/demo_table.css" rel="stylesheet">
 <div class="center">
 <div class="bg">
   <div class="dc_wrap">
@@ -17,25 +18,41 @@
         <div align="center"><img src="{dede:global.cfg_templets_skin/}/images/o_tbg1.jpg"></div>
         <div class="o_listbg">
           <div class="o_list">
-            <div class="o_select1">
-              <p class="o_selecton">已完成</p>
-              <div class="o_selhidediv">
-                <p>已完成</p>
-                <p>未完成</p>
-              </div>
-            </div>
-            <div class="o_tit"> <span>订单号</span><span>下单日期</span><span>提车日期</span><span>还车日期</span><span>有无司机</span><span class="text-center">操作</span> </div>
-            <ul class="o_ul">
-              <li> <span>12346</span><span>下单日期</span><span>提车日期</span><span>还车日期</span><span>有无司机</span><span class="text-center"><a href="#"><img src="{dede:global.cfg_templets_skin/}/images/quxiao.png" alt="取消订单"></a></span> </li>
-              <li> <span>12346</span><span>12346</span><span>12346</span><span>12346</span><span>无</span><span class="text-center"><a href="#"><img src="{dede:global.cfg_templets_skin/}/images/quxiao.png" alt="取消订单"></a></span> </li>
-               <li> <span>12346</span><span>下单日期</span><span>提车日期</span><span>还车日期</span><span>有无司机</span><span class="text-center"><a href="#"><img src="{dede:global.cfg_templets_skin/}/images/quxiao.png" alt="取消订单"></a></span> </li>
-              <li> <span>12346</span><span>12346</span><span>12346</span><span>12346</span><span>无</span><span class="text-center"><a href="#"><img src="{dede:global.cfg_templets_skin/}/images/quxiao.png" alt="取消订单"></a></span> </li>
-               <li> <span>12346</span><span>下单日期</span><span>提车日期</span><span>还车日期</span><span>有无司机</span><span class="text-center"><a href="#"><img src="{dede:global.cfg_templets_skin/}/images/quxiao.png" alt="取消订单"></a></span> </li>
+           <!--
+		    <div class="o_tit"> 
+				<span class="dd1">订单号</span><span class="dd2">提车日期</span><span class="dd3">还车日期</span><span class="dd4">用车天数</span><span class="dd5">超过天数</span><span class="dd6">车辆名称</span><span class="dd7">有无司机</span><span class="dd8">下单日期</span><span class="dd9">订单状态</span><span class="dd10">操作</span> 
+			</div>
+            <ul class="o_ul" >
+              
+              
              
             </ul>
-            <div class="o_page">
+		   -->
+			 <table cellpadding="0" cellspacing="0" border="0" class="display" id="example">
+        <thead>
+          <tr>
+            <th>订单号</th>
+            <th>提车日期</th>
+            <th>还车日期</th>
+            <th>用车天数</th>
+            <th>超过天数</th>
+			<th>车辆名称</th>
+            <th>有无司机</th>
+            <th>下单日期</th>
+            <th>订单状态</th>
+            <th>操作</th>
+          </tr>
+        </thead>
+        <tbody id="order_list">
+			
+        </tbody>
+       
+      </table>
+           <!--
+			 <div class="o_page">
             	<a href="#">&lt;</a> <a href="#">1</a> <a href="#">2</a> <a href="#">3</a> <a href="#">4</a> ... <a href="#">&gt;</a>
             </div>
+		   -->
           </div>
         </div>
       </div>
@@ -44,19 +61,9 @@
 </div>
 <div class="push"></div>
 </div>
-<script>
-	$(function(){
-		$(".o_selecton").click(function(){
-			$(this).siblings(".o_selhidediv").slideDown(100)
-		})
-		$(".o_selhidediv p").click(function(){
-			$(this).parents(".o_selhidediv").hide()
-			$(this).parents(".o_selhidediv").siblings(".o_selecton").html($(this).html())
-		})
-		
-	})
-</script>
 {dede:include filename='footer.htm'/}
-<script src="{dede:global.cfg_templets_skin/}/js/login.js"></script>
+<script src="{dede:global.cfg_templets_skin/}/js/jquery.dataTables.js"></script>
+<script src="{dede:global.cfg_templets_skin/}/js/order.js"></script>
+
 </body>
 </html>

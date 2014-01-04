@@ -9,12 +9,17 @@
 
 <div class="header">
 	<div class="w1204 m">
-        <div class="navigation tr">
-            [<a href="{dede:global.cfg_cmspath/}/member/login.php">登录</a>]&nbsp;[<a href="{dede:global.cfg_cmspath/}/member/login.php">注册</a>]&nbsp;&nbsp;&nbsp;|&nbsp;
+        <div class="navigation tr logining">
+            [<a href="{dede:global.cfg_cmspath/}/member/login.php">登录</a>]&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;
             {dede:type typeid='20'}<a href="[field:typelink /]">[field:typename /]</a>{/dede:type}&nbsp;|&nbsp;
             <a href=""onclick="this.style.behavior='url(#default#homepage)';this.setHomePage('{dede:global.cfg_basehost/}');">设为首页</a>	&nbsp;|&nbsp;
             <a href="javascript:window.external.AddFavorite('{dede:global.cfg_basehost/}','{dede:global.cfg_webname/}')">加入收藏</a>	&nbsp;|&nbsp;
-            <a href="#">帮助中心</a>
+            
+            <span>服务热线：40-000000-40</span>        
+        </div>
+		 <div class="navigation tr logined" style="display:none">
+             
+          <span class="countname"></span>, 欢迎您！&nbsp;&nbsp;{dede:type typeid='20'}<a href="[field:typelink /]">[field:typename /]</a>{/dede:type}&nbsp;&nbsp;|&nbsp;&nbsp;<a class="exit" href="javascript:;">退出</a>
             <span>服务热线：40-000000-40</span>        
         </div>
         <div class="logo-nav-search clear">
