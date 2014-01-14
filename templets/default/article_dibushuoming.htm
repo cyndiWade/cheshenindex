@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>{dede:global.cfg_webname/}</title>
+</head>
+
+<body>
+{dede:include filename='head.htm'/}
+
+<div class="center">
+  <div class="dc_bg2">
+   <div class="newcont">
+   <div class="position">
+   	<!--<p>当前位置： {dede:field name='position'/}<!--<a href="/">关于车神</a><span class="yellow"> > 新闻动态</span></p>-->
+   </div>
+     <div class="autohei new_tj" id="text" style="display:none">
+     	<div class="left">
+        	<span class="new_pic"><img src="{dede:global.cfg_templets_skin/}/images/n_p1.jpg"/></span>
+            <div class="blank"></div>
+      	    <div class="new_body">
+     	<h1 align="center" class="yellow">{dede:field.title/}</h1>
+        
+        <p >{dede:field.body/}</p>
+          </div>
+        </div>
+        <div class="right tjxw_list">
+        	<h4 class="yellow">其他说明</h4>
+            <ul>
+            {dede:arclist typeid='28'}
+            	<li><a href="[field:arcurl/]">[field:title/]</a></li>
+            {/dede:arclist}
+            </ul>
+        </div>
+     </div>
+	 <div style="height:700px; width:100%; background:none" id="box"></div>
+     
+  </div>
+  </div>
+
+	<div class="push"></div>
+</div>
+
+{dede:include filename='footer.htm'/}
+<script type="text/javascript">
+
+$(function(){
+		
+		
+		//登陆验证
+		var is_login = Cookie.getCookie("user_key") || 0;
+		if (is_login == false)
+		{
+			alert("对不起，目前只有会员才能查看！")
+			window.location.href = '/index/member/login.php';
+
+
+		}
+			else{
+				document.getElementById('text').style.display='block';
+                document.getElementById('box').style.display='none';
+
+		}
+
+	
+			
+})
+</script>
+</body>
+</html>

@@ -1,0 +1,218 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>车神集团官网</title>
+</head>
+
+<body>
+<link href="/index/templets/default/css/base.css" rel="stylesheet">
+<link href="/index/templets/default/css/index.css" rel="stylesheet">
+<link href="/index/templets/default/css/login.css" rel="stylesheet">
+<link href="/index/templets/default/css/bootstrap.min.css" rel="stylesheet">
+<link href="/index/templets/default/css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
+<script src="/index/templets/default/js/jquery.min.1.9.1.js"></script>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+<!--[if lte IE 6]> 
+　　<div id="ie6-warning">您正在使用 Internet Explorer 6，在本页面的显示效果可能有差异。建议您升级到 <a href="http://www.microsoft.com/china/windows/internet-explorer/" target="_blank">Internet Explorer 8</a> 或以下浏览器： <a href="http://www.mozillaonline.com/">Firefox</a> / <a href="http://www.google.com/chrome/?hl=zh-CN">Chrome</a> / <a href="http://www.apple.com.cn/safari/">Safari</a> / <a href="http://www.operachina.com/">Opera</a> 
+　　</div> 
+　　<script type="text/javascript"> 
+　　function position_fixed(el, eltop, elleft){ 
+　　// check if this is IE6 
+　　if(!window.XMLHttpRequest) 
+　　window.onscroll = function(){ 
+　　el.style.top = (document.documentElement.scrollTop + eltop)+"px"; 
+　　el.style.left = (document.documentElement.scrollLeft + elleft)+"px"; 
+　　} 
+　　else el.style.position = "fixed"; 
+　　} 
+　　position_fixed(document.getElementById("ie6-warning"),0, 0); 
+　　</script> 
+　　<![endif]--> 
+<script type="text/javascript"> 
+　　function AddFavorite(sURL, sTitle) {
+	sURL = encodeURI(sURL);
+	try{
+	window.external.addFavorite(sURL, sTitle);
+	}catch(e) {
+	try{
+	window.sidebar.addPanel(sTitle, sURL, "");
+	}catch (e) {
+	alert("加入收藏失败，请使用Ctrl+D进行添加,或手动在浏览器里进行设置.");
+	}
+	}
+	}
+	//设为首页
+	function SetHome(url){
+	if (document.all) {
+	document.body.style.behavior='url(#default#homepage)';
+	document.body.setHomePage(url);
+	}else{
+	alert("您好,您的浏览器不支持自动设置页面为首页功能,请您手动在浏览器里设置该页面为首页!");
+	}
+	}
+</script> 
+ <script type = "text/javascript">
+        $(document).ready(function () {
+            var isIE = !!window.ActiveXObject;
+            var isIE6 = isIE && !window.XMLHttpRequest;
+            if (isIE) {
+                if (isIE6) {
+                    alert('您正在使用低版本浏览器,为了保证您能有更好的访问效果,我们建议您使用谷歌Chrome浏览器、火狐Firefox浏览器或者IE7以上版本浏览器！');
+                    window.close();
+                }
+            }
+			
+        });
+</script>
+
+<div class="header">
+	<div class="w1204 m">
+        <div class="navigation tr logining">
+            [<a href="http://www.cheshen.com/index/member/login.php">登录</a>]&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;
+            <a href="/index/gerenzhongxin/">个人中心</a>&nbsp;|&nbsp;
+            <a onclick="SetHome('http://www.cheshen.com')" href="javascript:void(0)">设为首页</a>	&nbsp;|&nbsp;
+            <a onclick="AddFavorite('http://www.cheshen.com','车神集团官网')" href="javascript:void(0)">加入收藏</a>	&nbsp;|&nbsp;
+            
+            <span>服务热线：40-000000-40</span>        
+        </div>
+		 <div class="navigation tr logined" style="display:none">
+             
+          <span class="countname"></span>, 欢迎您！&nbsp;&nbsp;<a href="/index/gerenzhongxin/">个人中心</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a class="exit" href="javascript:;">退出</a>
+            <span>服务热线：40-000000-40</span>        
+        </div>
+        <div class="logo-nav-search clear">
+        	<div class="logo fl"><a href="/index/">车神官网</a></div>
+            <!--<div class="menu  fl tc f20">
+                <ul>
+<li class="current">
+<a href="/index/">首页</a>
+</li>
+<li>
+<a href="#">关于车神 </a>
+</li>
+<li>
+<a href="#">试驾预约 </a>
+</li>
+<li>
+<a href="#">资讯中心 </a>
+</li>
+</ul>
+           </div>-->
+		   
+		   
+		   <div class="menu  fl tc f20">
+                <ul>  
+                  <li><a href="/">首页</a></li>
+                  <li><a href="#">关于车神   
+                      <!--[if IE 7]><!--></a><!--<![endif]-->  
+                      <!--[if lte IE 6]><table><tr><td><![endif]-->  
+                      <ul>  
+                      	 
+                         <!-- <li><a href="/yuncms/pc_cheshen/about/news/">新闻动态</a></li>-->
+                         
+                          <li><a href="http://www.cheshen.com/index/plus/list.php?tid=6">车神简介</a></li>
+                         
+                          <li><a href="http://www.cheshen.com/index/plus/list.php?tid=9">联系我们</a></li>
+                                                    
+                      </ul>  
+                      <!--[if lte IE 6]></td></tr></table></a><![endif]-->  
+                  </li><li><a href="#">试驾预约   
+                      <!--[if IE 7]><!--></a><!--<![endif]-->  
+                      <!--[if lte IE 6]><table><tr><td><![endif]-->  
+                      <ul>  
+                      	 
+                          <li><a href="http://www.cheshen.com/index/plus/list.php?tid=13">试驾车型介绍</a></li>
+                         
+                          <li><a href="http://www.cheshen.com/index/plus/list.php?tid=14">预约申请</a></li>
+                                                    
+                      </ul>  
+                      <!--[if lte IE 6]></td></tr></table></a><![endif]-->  
+                  </li><li><a href="#">会员租车   
+                      <!--[if IE 7]><!--></a><!--<![endif]-->  
+                      <!--[if lte IE 6]><table><tr><td><![endif]-->  
+                      <ul>  
+                      	 
+                          <li><a href="http://www.cheshen.com/index/member/login.php">在线租车</a></li>
+                          <li><a href="http://www.cheshen.com/index/huiyuanzuche/zuchejiage">租车价格</a></li>
+						  <li><a href="http://www.cheshen.com/index/huiyuanzuche/zucheliucheng">流程及手续</a></li>
+						                           
+                      </ul>  
+                      <!--[if lte IE 6]></td></tr></table></a><![endif]-->  
+                  </li>                
+          		</ul>
+           </div>
+		   
+           <div class="search fr">
+           		<form action="/index/plus/search.php"  name="formsearch" method="post">
+                	<div class="input-append">
+                        <input type="text"  id="search-keyword" value="在这里搜索..." onfocus="if(this.value=='在这里搜索...'){this.value='';}"  onblur="if(this.value==''){this.value='在这里搜索...';}" />
+                        <button type="button" class="btn"></button>
+                    </div>    
+                </form>
+           </div> 
+        </div>
+	</div>        
+</div>
+
+<div class="center">
+
+<div class="bg">
+	<div class="dc_wrap">
+  <div class="" style="background:#514f50; width:1200px; margin:0 auto; display:block; height:1000px;">
+   <div class="newcont">
+      <p style="text-align:center"><img src="http://www.cheshen.com/index/templets/default/images/zucheliucheng.png"></p>
+     
+     
+  </div>
+  </div>
+</div>
+</div>
+</div>
+
+<div class="footer">
+<div class="w1204 m">
+<div class="m" style="width:1000px;">
+	<div class="help fl">
+    	<h2 class="f_1">预订说明</h2>
+        <ul>
+        	<li><a href="/index/information/dibushuoming/2014/0114/14.html">用车时间</a></li>
+			<li><a href="/index/information/dibushuoming/2014/0114/16.html">关于预订
+</a></li>
+        </ul>
+    </div>
+    <div class="help fl">
+    	<h2 class="f_2">事务处理</h2>
+        <ul>
+        	<li><a href="/index/information/dibushuoming/2014/0114/13.html">用车须知</a></li>
+        </ul>
+    </div>
+    <div class="help fl">
+    	<h2 class="f_3">费用结算</h2>
+        <ul>
+        	<li><a href="/index/information/dibushuoming/2014/0114/15.html">关于费用</a></li>
+           
+			
+        </ul>
+    </div>
+    <div class="help fl">
+    	<h2 class="f_4">帮助中心</h2>
+        <ul>
+            <li><a href="/index/information/dibushuoming/2014/0114/18.html">常见问题</a></li>
+        </ul>
+    </div>
+    <div class="cb"></div>
+    <div class="copyright tc mt50">Copyright © 2013   车神集团  All rights reserved. 粤ICP备06000005号-1</div>
+    </div>
+</div>
+</div>
+
+
+<!-- 代码开始 -->
+<div id="code"></div>
+<div id="code_img"></div>
+<a id="gotop" href="javascript:void(0)"></a>
+<!-- 代码结束 -->
+<script src="/index/templets/default/js/weixin.js" type="text/javascript"></script>
+</body>
+</html>

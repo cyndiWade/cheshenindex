@@ -1,0 +1,149 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>{dede:global.cfg_webname/}</title>
+</head>
+
+<body>
+{dede:include filename='head.htm'/}
+
+<div class="center">
+
+<div class="bg">
+	<div class="dc_wrap">
+  <div class="dc_bg2">
+   <div class="newcont">
+      <div class="lianxi" style="padding-bottom:200px;">
+      	<h2 class="tit1">预约申请</h2>
+		
+		
+       <div class="zpbox">
+		
+        	<div class="zpbg1">
+        		<ul>
+               
+                	<li>
+                    	<h3>申请试驾</h3>
+                       <div class="zp_txt">
+                       	 <p style="text-align:center">
+						 
+						 </p><div style="padding-top:5px;" align="center">
+			<form action="" id="thisForm" method="post" class="applyform">
+              <table width="98%" border="0" cellspacing="0" cellpadding="0">
+            <tbody><tr height="50">
+                  <td width="100"  class="tx1">试驾车型选择</td>
+                  <td ><select name="models" id="models" class="inpu1" datatype="*" nullmsg="请选择试驾车型！" errormsg="请选择试驾车型！">
+					  <option value="">请选择试驾车型</option>
+                      <option value="红色奥迪 R8">红色奥迪 R8</option>
+                      <option value="白色法拉利 599">白色法拉利 599</option>
+                      <option value="白色法拉利 F430">白色法拉利 F430</option>
+                    </select> </td>
+					<td> <div class="Validform_checktip"></div></td>
+                </tr>
+            <tr height="50">
+                  <td  class="tx1">称谓</td>
+                  <td ><select  name="appellation" id="appellation" class="inpu1" datatype="*" nullmsg="请选择称谓！" errormsg="请选择称谓！">
+					  <option value="">请选择称谓</option>
+                      <option value="先生">先生</option>
+                      <option value="小姐">小姐</option>
+                      <option value="夫人">夫人</option>
+                      <option value="爵士">爵士</option>
+                      <option value="博士">博士</option>
+                      <option value="女士">女士</option>
+                      <option value="教授">教授</option>
+                    </select> </td>
+					<td> <div class="Validform_checktip"></div></td>
+                </tr>
+            <tr height="50">
+                  <td  class="tx1" >姓氏</td>
+                  <td><input type="text" name ="surnames" id="surnames"class="inpu2" datatype="s1-2" errormsg="姓氏至少1个字或2个字哦！">  </td>
+				  <td> <div class="Validform_checktip"></div></td>
+                </tr>
+            <tr>
+                  <td  class="tx1">名字</td>
+                  <td>
+					<input type="text" name="name" id="name"  class="inpu2"  datatype="s2-6" errormsg="名字至少2个字哦" >
+				  </td>
+				  <td> <div class="Validform_checktip"></div></td>
+                </tr>
+            <tr height="50">
+                  <td  class="tx1">目前驾龄</td>
+                  <td><select name="age" id="age"  class="inpu1" datatype="*" nullmsg="请选择驾龄！" errormsg="请选择驾龄！">
+					  <option value="">请选择驾龄</option>
+                      <option value="2年以下">2年以下</option>
+                      <option value="2年至5年">2年至5年</option>
+                      <option value="5年以上">5年以上</option>
+                    </select>  </td>
+					<td> <div class="Validform_checktip"></div></td>
+                </tr>
+            <tr height="50">
+                  <td  class="tx1">手机号码</td>
+                  <td>
+					<input type="text"  name="sms" id="phone" class="inpu2" datatype="m" errormsg="请输入您的手机号码！" >
+				  </td>
+				  <td> <div class="Validform_checktip"></div></td>
+                </tr>
+            <tr height="50">
+                  <td  class="tx1">电邮地址</td>
+                  <td>
+					<input type="text"  name="email" id="email"  class="inpu2"  datatype="e"  errormsg="请输入正确邮箱！">
+				  </td>
+				  <td> <div class="Validform_checktip"></div></td>
+                </tr>
+            <tr height="50">
+                  <td  class="tx1">试驾卡卡号&nbsp;</td>
+                  <td><input type="text" name="number" id="number"  class="inpu2"   datatype="*"  errormsg="请输入试驾卡卡号!" ></td>
+				  <td> <div class="Validform_checktip"></div></td>
+                </tr>
+            <tr height="50">
+                  <td><span  class="tx1">试驾日期&nbsp;</span></td>
+                  <td><select name="date_time" id="date_time"  class="inpu1"   datatype="*"  errormsg="请输入试驾日期！">
+                      <option value="3天以内">3天以内</option>
+                      <option value="一周以内">一周以内</option>
+                      <option value="两周以内">两周以内</option>
+                    </select></td>
+					<td> <div class="Validform_checktip"></div></td>
+                </tr>
+            <tr>
+                  <td height="19">&nbsp;</td>
+                  <td height="19" align="left">&nbsp;</td>
+                </tr>
+            <tr>
+                  <td height="25">&nbsp;</td>
+                  <td height="45" align="left">  <input type="submit" value=""  class="tijiao1"/> <span id="msgdemo" style="margin-left:30px;"></span></td>
+                </tr>
+          </tbody></table>
+		  </form>
+            </div>
+						 
+						 
+						 <p></p>
+                       </div>
+                    </li>
+               
+                </ul>
+            </div>
+            <div align="center"><img src="{dede:global.cfg_templets_skin/}/images/bgbot.png"></div>
+        </div>
+		
+        
+		
+		
+		
+		
+      </div>
+      </div>
+     
+     
+  </div>
+  </div>
+</div>
+</div>
+
+{dede:include filename='footer.htm'/}
+
+<script src="{dede:global.cfg_templets_skin/}/js/Validform_v5.3.2.js"></script>
+<script src="{dede:global.cfg_templets_skin/}/js/apply.js"></script>
+</body>
+</html>

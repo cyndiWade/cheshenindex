@@ -11,11 +11,11 @@
 .menu{position:relative; z-index:100;/* height:74px;*/ line-height:90px;} 
 .menu li{float:left; position:static; width:175px;}  
 .menu ul{ padding:0 } 
-.menu ul ul{visibility:hidden; position:relative; width:1000px; height:55px; line-height:55px; padding:0}  
+.menu ul ul{visibility:hidden; position:relative; width:1000px; height:55px; line-height:55px;  margin:0px; padding:0px;}  
 .menu table{position:absolute; top:0; left:0;}   
 .menu ul li:hover ul,   
 .menu ul a:hover ul{visibility:visible;}   
-.menu a{display:block; color:#ababab; height:74px;}
+.menu a{display:block; color:#ababab; height:74px;margin:0px; padding:0px; overflow:hidden}
 .menu ul li a:hover{background:url(../images/online.png) no-repeat bottom; color:#fff;}    
 .menu ul ul li {text-align:center;font-size:12px; width:144px;}   
 .menu ul ul li a{display:block; width:144px; height:55px; float:left; color:#dedede !important; text-align:center; font-size:15px;}
@@ -72,3 +72,42 @@ _position:absolute;_bottom:auto;_top:expression(eval(document.documentElement.sc
 
 #code_img{ width:270px; height:355px; background:url(../images/icon.png) -4px -3px no-repeat; position:fixed; right:90px; bottom:67px; cursor:pointer; display:none;
 _position:absolute;_bottom:auto;_top:expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight-this.offsetHeight-(parseInt(this.currentStyle.marginTop,10)||0)-(parseInt(this.currentStyle.marginBottom,10)||0))); _margin-bottom:67px;}
+
+/* tipinfo */
+.tx1{font-size:12px; color:#666666}
+.inpu1{width:160px; line-height:30px; background: #FFFFFF; height:30px; border:1px solid #999;}
+.inpu2{width:150px; background:#efefef; height:22px; border:1px solid #999;}
+.tijiao1{background:url(../images/tijiao.jpg) no-repeat;width:209px!important;height:35px!important;border:none;cursor:pointer;}
+.Validform_checktip{
+	width:180px;display:inline-block;
+	margin-left:8px;
+	line-height:20px;
+	height:20px;
+	overflow:hidden;
+	color:#999;
+	font-size:12px;
+}
+.Validform_right{
+	color:#333;
+	padding-left:20px;
+	background:url(../images/right.png) no-repeat left center;
+}
+.Validform_wrong{
+	color:red;
+	padding-left:20px;
+	white-space:nowrap;
+	background:url(../images/error.png) no-repeat left center;
+}
+.Validform_loading{
+	padding-left:20px;
+	background:url(../images/onLoad.gif) no-repeat left center;
+}
+.Validform_error{
+	background-color:#ffe7e7;
+}
+#Validform_msg{color:#7d8289; font: 12px/1.5 tahoma, arial, \5b8b\4f53, sans-serif; width:280px; -webkit-box-shadow:2px 2px 3px #aaa; -moz-box-shadow:2px 2px 3px #aaa; background:#fff; position:absolute; top:0px; right:50px; z-index:99999; display:none;filter: progid:DXImageTransform.Microsoft.Shadow(Strength=3, Direction=135, Color='#999999');}
+#Validform_msg .iframe{position:absolute; left:0px; top:-1px; z-index:-1;}
+#Validform_msg .Validform_title{line-height:25px; height:25px; text-align:left; font-weight:bold; padding:0 8px; color:#fff; position:relative; background-color:#000;}
+#Validform_msg a.Validform_close:link,#Validform_msg a.Validform_close:visited{line-height:22px; position:absolute; right:8px; top:0px; color:#fff; text-decoration:none;}
+#Validform_msg a.Validform_close:hover{color:#cc0;}
+#Validform_msg .Validform_info{padding:8px;border:1px solid #000; border-top:none; text-align:left;}

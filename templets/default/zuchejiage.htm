@@ -1,0 +1,266 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>{dede:global.cfg_webname/}</title>
+<link href="{dede:global.cfg_templets_skin/}/css/bootstrap.min.css" rel="stylesheet" media="screen">
+<link href="{dede:global.cfg_templets_skin/}/css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
+<link href="{dede:global.cfg_templets_skin/}/css/base.css" rel="stylesheet">
+
+<script src="{dede:global.cfg_templets_skin/}/js/jquery.min.1.9.1.js"></script>
+
+ 
+<!–[if lt IE9]>
+<script> 
+   (function() {
+     if (! 
+     /*@cc_on!@*/
+     0) return;
+     var e = "abbr, article, aside, audio, canvas, datalist, details, dialog, eventsource, figure, footer, header, hgroup, mark, menu, meter, nav, output, progress, section, time, video".split(', ');
+     var i= e.length;
+     while (i--){
+         document.createElement(e[i])
+     } 
+})() 
+</script>
+<![endif]–>
+
+</head>
+
+<body>
+<!--fly_css-->
+{dede:include filename='head.htm'/}
+<div class="clear"></div>
+<div class="bg">
+<div class="dc_wrap">
+  <div style="background:#514f50;width:1200px; margin:0 auto">
+
+	<!--轮播图插件 -->
+
+
+ 
+
+    <div class="dc_cont autohei"  id="adam-eff">
+      <div class="dc_conleft left"  id="adam-tabsContent">
+      
+     
+
+        <div class="dchebox adam-tabs-list">
+          <a href="#myModal" data-toggle="modal"><img src="/index/templets/default/images/club2.png"></a>
+        </div>
+        <div class="dchebox adam-tabs-list">
+          <a href="#myModal" data-toggle="modal"><img src="/index/templets/default/images/club3.png"></a>
+        </div>
+		<div class="dchebox adam-tabs-list">
+          <a href="#myModal" data-toggle="modal"><img src="/index/templets/default/images/club4.png"></a>
+        </div>
+		<div class="dchebox adam-tabs-list">
+          <a href="#myModal" data-toggle="modal"><img src="/index/templets/default/images/club1.png"></a>
+        </div>
+		<div class="dchebox adam-tabs-list">
+          <a href="#myModal" data-toggle="modal"><img src="/index/templets/default/images/club5.png"></a>
+        </div>
+
+
+       
+      </div>
+
+
+
+			 <dl class="dc_conright right" id="adam-tabs">
+				<div class="dc_dwp1"><img src="{dede:global.cfg_templets_skin/}/images/dc-tbg1.png"></div>
+				<div class="dc_dwp1"><img src="{dede:global.cfg_templets_skin/}/images/dc_tbg.png" usemap="#Map">
+				  <map name="Map">
+					<area shape="poly" coords="59,12,51,38,45,61,33,106,45,111,57,116,66,121,76,129,87,138,156,69,144,57,125,43,102,29,78,19"  class="dche" href="javascript:;">
+					<area shape="poly" coords="169,80,100,149,109,159,116,170,123,182,128,194,132,204,226,179,218,154,207,129,192,107,181,93" class="dche" href="javascript:;">
+					<area shape="poly" coords="229,197,135,223,137,239,138,253,138,268,135,285,230,312,235,289,237,263,237,235,233,214"  class="dche" href="javascript:;">
+					<area shape="poly" coords="225,329,131,304,125,319,119,332,112,343,99,359,169,428,191,402,208,375,218,350"  class="dche" href="javascript:;">
+					<area shape="poly" coords="157,440,88,371,78,379,69,386,58,392,46,397,33,402,59,497,90,486,110,475,125,465,137,457,147,449" class="dche" href="javascript:;">
+				  </map>
+				</div>
+				
+					<dd class="dc_dj1 dc_dotp"><a href="javascript:;"><img style="opacity:1" src="{dede:global.cfg_templets_skin/}/images/dc_dotp1.png"/></a></h2>
+				   
+					<dd class="dc_dj2 dc_dotp"><a href="javascript:;"><img src="{dede:global.cfg_templets_skin/}/images/dc_dotp2.png"/></a></dd>
+					 
+					<dd class="dc_dj3 dc_dotp"><a href="javascript:;"><img src="{dede:global.cfg_templets_skin/}/images/dc_dotp3.png"/></a></dd>
+					
+					<dd class="dc_dj4 dc_dotp"><a href="javascript:;"><img src="{dede:global.cfg_templets_skin/}/images/dc_dotp4.png"/></a></dd>
+					 
+					<dd class="dc_dj5 dc_dotp"><a href="javascript:;"><img src="{dede:global.cfg_templets_skin/}/images/dc_dotp5.png"/></a></dd>
+			 </dl> 
+
+		</div>
+
+
+
+
+
+    </div>
+  </div>
+</div>
+</div>
+{dede:include filename='footer.htm'/}
+
+<!-- 提交订单层 -->
+
+
+
+
+<script src="{dede:global.cfg_templets_skin/}/js/jquery.min.1.9.1.js"></script>
+<script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
+<script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/bootstrap-datetimepicker.zh-CN.js" charset="UTF-8"></script>
+<script src="{dede:global.cfg_templets_skin/}/js/huandeng.js"></script>
+<script type="text/javascript">
+    $('.form_datetime').datetimepicker({
+         format: 'yyyy-mm-dd hh:ii',
+				language:  'zh-CN',
+		        weekStart: 1,
+		        todayBtn:  1,
+				autoclose: 1,
+				todayHighlight: 1,
+				startView: 2,
+				forceParse: 0,
+		        showMeridian: 1
+
+    });
+	
+	
+</script>
+
+<script  type="text/javascript">
+
+$(function(){
+		$(".cannot").click(
+				function(){
+					alert("对不起，该车型暂时没有多余的车辆可供使用！")	
+				}
+			)
+			$(".dche").hover(
+				function(){
+					var i = $(this).index()	;	
+					$(".dchebox").eq(i).stop(false,true).fadeIn().siblings().stop(false,true).hide()
+					$(".dc_dotp img").css("opacity","0.5").eq(i).css("opacity","1")
+				}
+				
+			)
+})
+
+
+
+
+$(function(){
+
+	//日期选择器模块
+	(function () {
+		$(".paging a").each(function(i){
+			$(this).attr("rel",i+1)
+			if(i == 2){
+				return false;
+			}
+		})
+
+		$('.form_datetime').datetimepicker({
+					format: 'yyyy-mm-dd hh:ii',
+					language:  'zh-CN',
+					weekStart: 1,
+					todayBtn:  1,
+					autoclose: 1,
+					todayHighlight: 1,
+					startView: 2,
+					forceParse: 0,
+					showMeridian: 1
+
+		});
+	
+	});
+
+
+ 
+		
+	
+	//轮播图模块
+	(function () {
+	
+		var adam_tabsContent = $('#adam-tabsContent');	//轮播图容器
+	
+		//请求车辆数据
+		var cars_data_result = ajax_post_setup(ul,{
+			'server_url' : sever_url + '/Api/Cars/cars_list'
+		});
+		
+		if (cars_data_result == false)
+		{
+			//alert('请求超时');
+		
+		} else if (cars_data_result.status != 0)
+		{
+			alert(cars_data_result.msg);
+
+		} else {
+	
+			var cars_data = cars_data_result.data;		//获取车辆数据
+			
+			
+			$.each(cars_data[400], function (i, n) {
+					var photos = n.cars_photos[0];
+					var cars_id = n.id;
+
+					if (photos != undefined)
+					{
+						var photo = photos.url;	//
+						var brand = n.brand;
+
+						$(".adam-scroll").eq(2).find(".adam-big-img ul").append("<li data-cars_id="+ cars_id +" data-brand="+brand+"><a href='#myModal' data-toggle='modal'><img src='"+ photo +"'/></a></li>");
+						$(".adam-scroll").eq(2).find(".adam-small-imglist").append("<dd><a><img src='" + photo + "' width='80'/></a></dd>");
+					} 
+
+					
+					 
+			});
+			$.each(cars_data[800], function (i, n) {
+					var photos = n.cars_photos[0];
+					var cars_id = n.id;
+
+					if (photos != undefined)
+					{
+						var photo = photos.url;	//
+						var brand = n.brand;
+
+						$(".adam-scroll").eq(3).find(".adam-big-img ul").append("<li data-cars_id="+ cars_id +" data-brand="+brand+"><a href='#myModal' data-toggle='modal'><img src='"+ photo +"'/></a></li>");
+						$(".adam-scroll").eq(3).find(".adam-small-imglist").append("<dd><a><img src='" + photo + "' width='80'/></a></dd>");
+					} 
+
+					
+					 
+			});
+			$(".adam-big-img ul li a").click(function(){
+					var brand = $(this).parent("li").data('brand');
+					var cars_id = $(this).parent("li").data('cars_id');
+					$(".cars_name").html(brand);
+					$(".cars_id").val(cars_id);
+					$('.start_schedule_time').val('');
+					$('.over_schedule_time').val('');
+					$('.remarks').val('');
+			})
+
+
+
+		}
+		$("#adam-eff").adam_Eff();
+
+	})();
+
+
+
+		
+});
+
+
+
+
+
+</script>
+</body>
+</html>

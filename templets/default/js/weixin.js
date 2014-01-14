@@ -93,17 +93,7 @@ $(window).scroll(function(e){
 $(function(){
 	
 	
-			//*招聘点击js*
-		$(".zpbox h3").click(function(){
-		  if($(this).find("span").attr("class")=="dot_up2"){
-			 $(this).find("span").attr("class","dot_up1")
-			 $(this).parent("li").children(".zp_txt").slideDown()
-			 }
-		  else {
-			   $(this).find(".dot_up1").attr("class","dot_up2")
-			   $(this).parent("li").children(".zp_txt").slideUp()
-		   }
-		})
+	
 
 		
 		var is_login = Cookie.getCookie("user_key") || 0;

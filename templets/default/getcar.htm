@@ -1,0 +1,86 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>{dede:global.cfg_webname/}</title>
+</head>
+
+<body>
+<!--fly_css-->
+{dede:include filename='head.htm'/}
+<link href="/index/templets/default/css/demo_page.css" rel="stylesheet">
+<link href="/index/templets/default/css/demo_table.css" rel="stylesheet">
+<style>
+#car_rental {padding:0;}
+.car_chooose a, .car_chooose_x a {display:block; float:left; width:300px; text-decoration:none; color:#2e2e2e; padding:1em; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; -0-box-sizing:border-box; box-sizing:border-box; cursor:pointer; position:relative;}
+.car_chooose_x a {padding:0.5em;}
+.car_chooose_x img{ width:300px; height:180px;border:2px #CCCCCC solid }
+.car_chooose a h3 {color:#333; font-size:18px; height:26px; line-height:26px;}
+.car_chooose a h3 .icon_check, .car_chooose_x a h3 .icon_check {background:url(images/check.png) 0 0 no-repeat; width:26px; height:26px; display:block; float:right; margin-right:0; margin-left:10px;}
+.car_chooose a p.dsec, .car_chooose_x a p.dsec {height:40px; max-height:40px; margin-bottom:3px; overflow:hidden;}
+.car_chooose a p.grey, .car_chooose_x a p.grey {color:#9a9a9a; font-size:12px; height:40px; max-height:40px; overflow:hidden;}
+.car_chooose a p.car_thumb, .car_chooose_x a p.car_thumb {margin:5px 0; height:80px; max-height:80px;}
+.car_chooose a p.car_thumb img, .car_chooose_x a p.car_thumb img {max-height:80px !important;}
+.car_chooose a.active, .car_chooose_x a.active {background-color:#F7C666;}
+.car_chooose a.active h3 .icon_check, .car_chooose_x a.active h3 .icon_check {background-position:0 -26px;}
+.car_chooose a.active p.grey, .car_chooose_x a.active p.grey {color:rgba(255,255,255,.7);}
+.car_chooose_x a h3 {color:#fff; font-size:18px; height:26px; line-height:26px; position:absolute; z-index:1; top:5px; right:20px;}
+</style>
+<div class="center">
+<div class="bg">
+  <div class="dc_wrap">
+    <div class="dc_bgbox">
+      <div class="o_bg1">
+        <div align="center">{dede:include filename='member_menu.htm'/}</div>
+        <div class="o_listbg">
+          <div class="o_list">
+            <div class="content" id="car_rental" style="">
+			<div class="car_chooose_x" id="carSeriesDiv">
+				<a id="carSeries-50">
+					<div class="backgb">
+						<img src="http://cheshen.aduu.cn/cheshen/images/x1.jpg">
+					</div>
+					<h3>车神白领俱乐部</h3>
+				</a> 
+				<a id="carSeries-100">
+					<div class="backgb">
+						<img src="http://cheshen.aduu.cn/cheshen/images/x2.jpg">
+					</div>
+					<h3>车神精英俱乐部</h3>
+				</a> 
+				<a id="carSeries-200">
+					<div class="backgb">
+						<img src="http://cheshen.aduu.cn/cheshen/images/x3.jpg">
+					</div>
+					<h3>车神总裁俱乐部</h3>
+				</a> 
+				<a id="carSeries-400">
+					<div class="backgb">
+						<img src="http://cheshen.aduu.cn/cheshen/images/x4.jpg">
+					</div>
+					<h3>车神贵族俱乐部</h3>
+				</a> 
+				<a id="carSeries-800">
+					<div class="backgb">
+						<img src="http://cheshen.aduu.cn/cheshen/images/x5.jpg">
+					</div>
+					<h3>车神领袖俱乐部</h3>
+				</a>
+			</div>
+
+			
+		</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="push"></div>
+</div>
+{dede:include filename='footer.htm'/}
+<script src="{dede:global.cfg_templets_skin/}/js/jquery.dataTables.js"></script>
+
+
+</body>
+</html>

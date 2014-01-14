@@ -204,7 +204,20 @@
 <script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
 <script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/bootstrap-datetimepicker.zh-CN.js" charset="UTF-8"></script>
 <script src="{dede:global.cfg_templets_skin/}/js/huandeng.js"></script>
+<script type="text/javascript">
+    $('.form_datetime').datetimepicker({
+         format: 'yyyy-mm-dd hh:ii',
+				language:  'zh-CN',
+		        weekStart: 1,
+		        todayBtn:  1,
+				autoclose: 1,
+				todayHighlight: 1,
+				startView: 2,
+				forceParse: 0,
+		        showMeridian: 1
 
+    });
+</script>
 
 <script src="{dede:global.cfg_templets_skin/}/js/getcars.js"></script>
 </body>

@@ -1,0 +1,41 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>{dede:global.cfg_webname/}</title> 
+</head>
+
+<body>
+{dede:include filename='head.htm'/}
+<div class="center">
+<div class="bg">
+  <div class="dc_wrap">
+    <div class="dc_bgbox">
+      <div class="o_bg1">
+        <div align="center"><img src="{dede:global.cfg_templets_skin/}/images/g_grzx_t.jpg" usemap="#Map">
+          <map name="Map">
+            {dede:type typeid='21'}<area shape="rect" coords="748,45,855,74" href="[field:typelink /]">{/dede:type}
+          </map>
+        </div>
+        <div class="g_grbg">
+       	  <div class="g_grzx">
+            	<ul>
+					<li class="ml5">用户帐号：&nbsp;&nbsp;<span class="g_account"></span></li>
+					<li class="ml4">会员级别：&nbsp;&nbsp;<span class="g_member_rank"></span></li>
+                	<li class="ml3">入会时间：&nbsp;&nbsp;<span class="g_date"></span></li>
+					<li class="ml2">结束时间：&nbsp;&nbsp;<span class="g_over_date"></span></li>
+                    <li class="ml1">使用天数&nbsp;&nbsp;<span class="g_use_car_number"></span></li>
+					<li class="">总天数&nbsp;&nbsp;<span class="g_car_number"></span></li>
+                </ul>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="push"></div>
+</div>
+{dede:include filename='footer.htm'/}
+<script src="{dede:global.cfg_templets_skin/}/js/g_grzx.js"></script>
+</body>
+</html>

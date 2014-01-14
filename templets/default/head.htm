@@ -5,15 +5,66 @@
 <link href="{dede:global.cfg_templets_skin/}/css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
 <script src="{dede:global.cfg_templets_skin/}/js/jquery.min.1.9.1.js"></script>
 <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
-
+<!--[if lte IE 6]> 
+　　<div id="ie6-warning">您正在使用 Internet Explorer 6，在本页面的显示效果可能有差异。建议您升级到 <a href="http://www.microsoft.com/china/windows/internet-explorer/" target="_blank">Internet Explorer 8</a> 或以下浏览器： <a href="http://www.mozillaonline.com/">Firefox</a> / <a href="http://www.google.com/chrome/?hl=zh-CN">Chrome</a> / <a href="http://www.apple.com.cn/safari/">Safari</a> / <a href="http://www.operachina.com/">Opera</a> 
+　　</div> 
+　　<script type="text/javascript"> 
+　　function position_fixed(el, eltop, elleft){ 
+　　// check if this is IE6 
+　　if(!window.XMLHttpRequest) 
+　　window.onscroll = function(){ 
+　　el.style.top = (document.documentElement.scrollTop + eltop)+"px"; 
+　　el.style.left = (document.documentElement.scrollLeft + elleft)+"px"; 
+　　} 
+　　else el.style.position = "fixed"; 
+　　} 
+　　position_fixed(document.getElementById("ie6-warning"),0, 0); 
+　　</script> 
+　　<![endif]--> 
+<script type="text/javascript"> 
+　　function AddFavorite(sURL, sTitle) {
+	sURL = encodeURI(sURL);
+	try{
+	window.external.addFavorite(sURL, sTitle);
+	}catch(e) {
+	try{
+	window.sidebar.addPanel(sTitle, sURL, "");
+	}catch (e) {
+	alert("加入收藏失败，请使用Ctrl+D进行添加,或手动在浏览器里进行设置.");
+	}
+	}
+	}
+	//设为首页
+	function SetHome(url){
+	if (document.all) {
+	document.body.style.behavior='url(#default#homepage)';
+	document.body.setHomePage(url);
+	}else{
+	alert("您好,您的浏览器不支持自动设置页面为首页功能,请您手动在浏览器里设置该页面为首页!");
+	}
+	}
+</script> 
+ <script type = "text/javascript">
+        $(document).ready(function () {
+            var isIE = !!window.ActiveXObject;
+            var isIE6 = isIE && !window.XMLHttpRequest;
+            if (isIE) {
+                if (isIE6) {
+                    alert('您正在使用低版本浏览器,为了保证您能有更好的访问效果,我们建议您使用谷歌Chrome浏览器、火狐Firefox浏览器或者IE7以上版本浏览器！');
+                    window.close();
+                }
+            }
+			
+        });
+</script>
 
 <div class="header">
 	<div class="w1204 m">
         <div class="navigation tr logining">
-            [<a href="{dede:global.cfg_cmspath/}/member/login.php">登录</a>]&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;
+            [<a href="http://www.cheshen.com/index/member/login.php">登录</a>]&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;
             {dede:type typeid='20'}<a href="[field:typelink /]">[field:typename /]</a>{/dede:type}&nbsp;|&nbsp;
-            <a href=""onclick="this.style.behavior='url(#default#homepage)';this.setHomePage('{dede:global.cfg_basehost/}');">设为首页</a>	&nbsp;|&nbsp;
-            <a href="javascript:window.external.AddFavorite('{dede:global.cfg_basehost/}','{dede:global.cfg_webname/}')">加入收藏</a>	&nbsp;|&nbsp;
+            <a onclick="SetHome('{dede:global.cfg_basehost/}')" href="javascript:void(0)">设为首页</a>	&nbsp;|&nbsp;
+            <a onclick="AddFavorite('{dede:global.cfg_basehost/}','{dede:global.cfg_webname/}')" href="javascript:void(0)">加入收藏</a>	&nbsp;|&nbsp;
             
             <span>服务热线：40-000000-40</span>        
         </div>
@@ -24,24 +75,66 @@
         </div>
         <div class="logo-nav-search clear">
         	<div class="logo fl"><a href="{dede:global.cfg_cmsurl/}/">车神官网</a></div>
-            <div class="menu  fl tc f20">
+            <!--<div class="menu  fl tc f20">
+                <ul>
+<li class="current">
+<a href="/index/">首页</a>
+</li>
+<li>
+<a href="#">关于车神 </a>
+</li>
+<li>
+<a href="#">试驾预约 </a>
+</li>
+<li>
+<a href="#">资讯中心 </a>
+</li>
+</ul>
+           </div>-->
+		   
+		   
+		   <div class="menu  fl tc f20">
                 <ul>  
-                  <li {dede:field name=typeid runphp="yes"}(@me=="")? @me=" class='current' ":@me="";{/dede:field}><a href="{dede:global.cfg_cmsurl/}/">首页</a></li>
-                  {dede:channelartlist typeid='2,4,3'}
-                  <li {dede:field name='currentstyle'/}><a href="#">{dede:field name='typename'/}   
+                  <li><a href="/">首页</a></li>
+                  <li><a href="#">关于车神   
                       <!--[if IE 7]><!--></a><!--<![endif]-->  
                       <!--[if lte IE 6]><table><tr><td><![endif]-->  
                       <ul>  
-                      	{dede:channel type='son' noself='yes'} 
-                          <li><a href="[field:typelink/]">[field:typename/]</a></li>
-                        {/dede:channel}                            
+                      	 
+                         <!-- <li><a href="/yuncms/pc_cheshen/about/news/">新闻动态</a></li>-->
+                         
+                          <li><a href="http://www.cheshen.com/index/plus/list.php?tid=6">车神简介</a></li>
+                         
+                          <li><a href="http://www.cheshen.com/index/plus/list.php?tid=9">联系我们</a></li>
+                                                    
                       </ul>  
                       <!--[if lte IE 6]></td></tr></table></a><![endif]-->  
-                  </li>  
-                
-                  {/dede:channelartlist}                
+                  </li><li><a href="#">试驾预约   
+                      <!--[if IE 7]><!--></a><!--<![endif]-->  
+                      <!--[if lte IE 6]><table><tr><td><![endif]-->  
+                      <ul>  
+                      	 
+                          <li><a href="http://www.cheshen.com/index/plus/list.php?tid=13">试驾车型介绍</a></li>
+                         
+                          <li><a href="http://www.cheshen.com/index/plus/list.php?tid=14">预约申请</a></li>
+                                                    
+                      </ul>  
+                      <!--[if lte IE 6]></td></tr></table></a><![endif]-->  
+                  </li><li><a href="#">会员租车   
+                      <!--[if IE 7]><!--></a><!--<![endif]-->  
+                      <!--[if lte IE 6]><table><tr><td><![endif]-->  
+                      <ul>  
+                      	 
+                          <li><a href="http://www.cheshen.com/index/member/login.php">在线租车</a></li>
+                          <li><a href="http://www.cheshen.com/index/huiyuanzuche/zuchejiage">租车价格</a></li>
+						  <li><a href="http://www.cheshen.com/index/huiyuanzuche/zucheliucheng">流程及手续</a></li>
+						                           
+                      </ul>  
+                      <!--[if lte IE 6]></td></tr></table></a><![endif]-->  
+                  </li>                
           		</ul>
            </div>
+		   
            <div class="search fr">
            		<form action="{dede:global.cfg_cmsurl/}/plus/search.php"  name="formsearch" method="post">
                 	<div class="input-append">
