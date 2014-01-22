@@ -1,7 +1,7 @@
 //全局变量
 var ul = "../agency.php";	 //代理服务器文件
-// var sever_url = "http://121.199.12.139/cheshenOA"
-var sever_url = "http://yunqiserver.xicp.net/cheshenOA";
+var sever_url = "http://116.226.217.58/cheshenOA"
+// var sever_url = "http://yunqiserver.xicp.net/cheshenOA";
 
 /**
  * cookie操作类

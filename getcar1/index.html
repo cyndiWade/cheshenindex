@@ -1,0 +1,349 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>车神集团官网</title>
+</head>
+
+<body>
+<!--fly_css-->
+<link href="/index/templets/default/css/base.css" rel="stylesheet">
+<link href="/index/templets/default/css/index.css" rel="stylesheet">
+<link href="/index/templets/default/css/login.css" rel="stylesheet">
+<link href="/index/templets/default/css/bootstrap.min.css" rel="stylesheet">
+<link href="/index/templets/default/css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
+<script src="/index/templets/default/js/jquery.min.1.9.1.js"></script>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+<!--[if lte IE 6]> 
+　　<div id="ie6-warning">您正在使用 Internet Explorer 6，在本页面的显示效果可能有差异。建议您升级到 <a href="http://www.microsoft.com/china/windows/internet-explorer/" target="_blank">Internet Explorer 8</a> 或以下浏览器： <a href="http://www.mozillaonline.com/">Firefox</a> / <a href="http://www.google.com/chrome/?hl=zh-CN">Chrome</a> / <a href="http://www.apple.com.cn/safari/">Safari</a> / <a href="http://www.operachina.com/">Opera</a> 
+　　</div> 
+　　<script type="text/javascript"> 
+　　function position_fixed(el, eltop, elleft){ 
+　　// check if this is IE6 
+　　if(!window.XMLHttpRequest) 
+　　window.onscroll = function(){ 
+　　el.style.top = (document.documentElement.scrollTop + eltop)+"px"; 
+　　el.style.left = (document.documentElement.scrollLeft + elleft)+"px"; 
+　　} 
+　　else el.style.position = "fixed"; 
+　　} 
+　　position_fixed(document.getElementById("ie6-warning"),0, 0); 
+　　</script> 
+　　<![endif]--> 
+<script type="text/javascript"> 
+　　function AddFavorite(sURL, sTitle) {
+	sURL = encodeURI(sURL);
+	try{
+	window.external.addFavorite(sURL, sTitle);
+	}catch(e) {
+	try{
+	window.sidebar.addPanel(sTitle, sURL, "");
+	}catch (e) {
+	alert("加入收藏失败，请使用Ctrl+D进行添加,或手动在浏览器里进行设置.");
+	}
+	}
+	}
+	//设为首页
+	function SetHome(url){
+	if (document.all) {
+	document.body.style.behavior='url(#default#homepage)';
+	document.body.setHomePage(url);
+	}else{
+	alert("您好,您的浏览器不支持自动设置页面为首页功能,请您手动在浏览器里设置该页面为首页!");
+	}
+	}
+</script> 
+ <script type = "text/javascript">
+        $(document).ready(function () {
+            var isIE = !!window.ActiveXObject;
+            var isIE6 = isIE && !window.XMLHttpRequest;
+            if (isIE) {
+                if (isIE6) {
+                    alert('您正在使用低版本浏览器,为了保证您能有更好的访问效果,我们建议您使用谷歌Chrome浏览器、火狐Firefox浏览器或者IE7以上版本浏览器！');
+                    window.close();
+                }
+            }
+			
+        });
+</script>
+
+<div class="header">
+	<div class="w1204 m">
+        <div class="navigation tr logining">
+            [<a href="http://www.cheshen.com/index/member/login.php">登录</a>]&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;
+            <a href="/index/gerenzhongxin/">个人中心</a>&nbsp;|&nbsp;
+            <a onclick="SetHome('http://www.cheshen.com')" href="javascript:void(0)">设为首页</a>	&nbsp;|&nbsp;
+            <a onclick="AddFavorite('http://www.cheshen.com','车神集团官网')" href="javascript:void(0)">加入收藏</a>	&nbsp;|&nbsp;
+            
+            <span>服务热线：40-000000-40</span>        
+        </div>
+		 <div class="navigation tr logined" style="display:none">
+             
+          <span class="countname"></span>, 欢迎您！&nbsp;&nbsp;<a href="/index/gerenzhongxin/">个人中心</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a class="exit" href="javascript:;">退出</a>
+            <span>服务热线：40-000000-40</span>        
+        </div>
+        <div class="logo-nav-search clear">
+        	<div class="logo fl"><a href="/index/">车神官网</a></div>
+            <!--<div class="menu  fl tc f20">
+                <ul>
+<li class="current">
+<a href="/index/">首页</a>
+</li>
+<li>
+<a href="#">关于车神 </a>
+</li>
+<li>
+<a href="#">试驾预约 </a>
+</li>
+<li>
+<a href="#">资讯中心 </a>
+</li>
+</ul>
+           </div>-->
+		   
+		   
+		   <div class="menu  fl tc f20">
+                <ul>  
+                  <li><a href="/">首页</a></li>
+                  <li><a href="#">关于车神   
+                      <!--[if IE 7]><!--></a><!--<![endif]-->  
+                      <!--[if lte IE 6]><table><tr><td><![endif]-->  
+                      <ul>  
+                      	 
+                         <!-- <li><a href="/yuncms/pc_cheshen/about/news/">新闻动态</a></li>-->
+                         
+                          <li><a href="http://www.cheshen.com/index/plus/list.php?tid=6">车神简介</a></li>
+                         
+                          <li><a href="http://www.cheshen.com/index/plus/list.php?tid=9">联系我们</a></li>
+                                                    
+                      </ul>  
+                      <!--[if lte IE 6]></td></tr></table></a><![endif]-->  
+                  </li><li><a href="#">试驾预约   
+                      <!--[if IE 7]><!--></a><!--<![endif]-->  
+                      <!--[if lte IE 6]><table><tr><td><![endif]-->  
+                      <ul>  
+                      	 
+                          <li><a href="http://www.cheshen.com/index/plus/list.php?tid=13">试驾车型介绍</a></li>
+                         
+                          <li><a href="http://www.cheshen.com/index/plus/list.php?tid=14">预约申请</a></li>
+                                                    
+                      </ul>  
+                      <!--[if lte IE 6]></td></tr></table></a><![endif]-->  
+                  </li><li><a href="#">会员租车   
+                      <!--[if IE 7]><!--></a><!--<![endif]-->  
+                      <!--[if lte IE 6]><table><tr><td><![endif]-->  
+                      <ul>  
+                      	 
+                          <li><a href="http://www.cheshen.com/index/member/login.php">在线租车</a></li>
+                          <li><a href="http://www.cheshen.com/index/huiyuanzuche/zuchejiage">租车价格</a></li>
+						  <li><a href="http://www.cheshen.com/index/huiyuanzuche/zucheliucheng">流程及手续</a></li>
+						                           
+                      </ul>  
+                      <!--[if lte IE 6]></td></tr></table></a><![endif]-->  
+                  </li>                
+          		</ul>
+           </div>
+		   
+           <div class="search fr">
+           		<form action="/index/plus/search.php"  name="formsearch" method="post">
+                	<div class="input-append">
+                        <input type="text"  id="search-keyword" value="在这里搜索..." onfocus="if(this.value=='在这里搜索...'){this.value='';}"  onblur="if(this.value==''){this.value='在这里搜索...';}" />
+                        <button type="button" class="btn"></button>
+                    </div>    
+                </form>
+           </div> 
+        </div>
+	</div>        
+</div>
+<link href="/index/templets/default/css/demo_page.css" rel="stylesheet">
+<link href="/index/templets/default/css/demo_table.css" rel="stylesheet">
+<style>
+#car_rental {padding:0;}
+.car_chooose a, .car_chooose_x a {display:block; float:left; width:300px; text-decoration:none; color:#2e2e2e; padding:1em; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; -0-box-sizing:border-box; box-sizing:border-box; cursor:pointer; position:relative;}
+.car_chooose_x a {padding:0.5em;}
+.car_chooose_x img{ width:300px; height:180px;border:2px #CCCCCC solid }
+.car_chooose a h3 {color:#333; font-size:18px; height:26px; line-height:26px;}
+.car_chooose a h3 .icon_check, .car_chooose_x a h3 .icon_check {background:url(images/check.png) 0 0 no-repeat; width:26px; height:26px; display:block; float:right; margin-right:0; margin-left:10px;}
+.car_chooose a p.dsec, .car_chooose_x a p.dsec {height:40px; max-height:40px; margin-bottom:3px; overflow:hidden;}
+.car_chooose a p.grey, .car_chooose_x a p.grey {color:#9a9a9a; font-size:12px; height:40px; max-height:40px; overflow:hidden;}
+.car_chooose a p.car_thumb, .car_chooose_x a p.car_thumb {margin:5px 0; height:80px; max-height:80px;}
+.car_chooose a p.car_thumb img, .car_chooose_x a p.car_thumb img {max-height:80px !important;}
+.car_chooose a.active, .car_chooose_x a.active {background-color:#F7C666;}
+.car_chooose a.active h3 .icon_check, .car_chooose_x a.active h3 .icon_check {background-position:0 -26px;}
+.car_chooose a.active p.grey, .car_chooose_x a.active p.grey {color:rgba(255,255,255,.7);}
+.car_chooose_x a h3 {color:#fff; font-size:18px; height:26px; line-height:26px; position:absolute; z-index:1; top:5px; right:20px;}
+</style>
+<div class="center">
+<div class="bg">
+  <div class="dc_wrap dc_h">
+      <div class="dc_bgbox "> 
+        <!--
+       caidan
+       
+       -->
+        <div align="center">
+          <style>
+.member_menu{ width:100%;}
+.member_menu_in{ width:1202px; height:126px; margin:0 auto; line-height:126px; background:url(http://www.cheshen.com/index/templets/default/images/member_menu.jpg) no-repeat}
+.member_menu ul{padding:0px 0px 0px 75px; margin:0px;}
+.member_menu li{ width:141px; height:97px; float:left; margin-right:40px; line-height:97px;background:url(http://www.cheshen.com/index/templets/default/images/member_menu_botton1.png) no-repeat}
+.member_menu a{ width:141px; height:55px; float:left; margin-right:20px;line-height:55px; text-align:center; display:block; color: #FF9900; font-weight:bold; margin-top:42px;}
+</style>
+          <div class="member_menu">
+            <div class="member_menu_in">
+              <ul>
+                <li> <a href="/index/wodedingdan/getcar">下订单</a> </li>
+                <li> <a href="/index/wodedingdan/">订单记录</a> </li>
+                <li> <a href="/index/gerenzhongxin/">我的信息</a> </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!--end-->
+        
+        <div class="o_listbg">
+          <div class="o_list">
+            <div class="content" id="car_rental">
+              <div class="car_chooose_x" id="carSeriesDiv"> <a id="carSeries-50">
+                <div class="backgb"> <img src="http://cheshen.aduu.cn/cheshen/images/x1.jpg"> </div>
+                <h3>车神白领俱乐部</h3>
+                </a> <a id="carSeries-100">
+                <div class="backgb"> <img src="http://cheshen.aduu.cn/cheshen/images/x2.jpg"> </div>
+                <h3>车神精英俱乐部</h3>
+                </a> <a id="carSeries-200">
+                <div class="backgb"> <img src="http://cheshen.aduu.cn/cheshen/images/x3.jpg"> </div>
+                <h3>车神总裁俱乐部</h3>
+                </a> <a id="carSeries-400">
+                <div class="backgb"> <img src="http://cheshen.aduu.cn/cheshen/images/x4.jpg"> </div>
+                <h3>车神贵族俱乐部</h3>
+                </a> <a id="carSeries-800">
+                <div class="backgb"> <img src="http://cheshen.aduu.cn/cheshen/images/x5.jpg"> </div>
+                <h3>车神领袖俱乐部</h3>
+                </a> </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="order_step2">
+        <div class="order_stepbox">
+          <div class="blank"></div>
+          <div class="step_tit2"><span><a href="/index/getcar1/"><img src="/index/templets/default/images/back_step.jpg"/></a></span></div>
+          <div class="blank"></div>
+          <div class="order_stepcont">
+            <div class="widthcont ordercont1 hide">
+              <table class="display carlist" cellpadding="0" cellspacing="0" border="0" align="left" >
+                <thead style="display:none">
+                  <tr>
+                    <th>&nbsp;</th>
+                    <th>&nbsp; </th>
+                  </tr>
+                </thead>
+                <tbody class="car_list"></tbody>
+              </table>
+            </div>
+            <div class="widthcont ordercont2 hide">
+              <div class="xiadan">
+                <ul>
+                  <li class="bornone jibie"> 你是： <span class="g_member_rank"></span> </li>
+                  <li>
+                  		<h5 class="tt1">车型选择 <span>Cars models</span></h5>
+                        <div class="ma20">你选择的是：<span class="models cf"></span></div>
+						<input type="hidden" class="cars_id" value="">
+                  </li>
+				  
+                  <li>
+                  		<h5 class="tt1">租车时间 <span>Start time</span></h5>
+                        <div class="start ma20"><div class="input-append date form_datetime"   data-link-field="dtp_input1">
+                    <input size="16" type="text" value="" class="start_schedule_time" style="width:128px;" readonly> <span class="add-on"><i class="icon-th"></i></span></div></div>
+                  </li>
+                  <li>
+                  		<h5 class="tt1">还车时间 <span>End time</span></h5>
+                        <div class="end ma20"><div class="input-append date form_datetime"  data-link-field="dtp_input1">
+                    <input size="16" type="text" value="" style="width:128px;" class="over_schedule_time" readonly> <span class="add-on"><i class="icon-th"></i></span></div></div>
+                  </li>
+                  <li>
+                  		<h5 class="tt1">是否代驾 <span>Driver</span></h5>
+                        <div class="ma20"><input type="radio" name="driver"  class="checked1"  checked="checked"> 不需要  <input name="driver" type="radio">需要 <span> (费用200元/天)</span></div>
+                  </li>
+                  <li>
+                  		<h5 class="tt1">是否送车 <span>Send car</span></h5>
+                    <div class="ma20"><input name="sendcar" type="radio"  class="checked2"  checked="checked"> 不需要  <input name="sendcar" type="radio" class="checked3" >需要 </div>
+                  </li>
+                  <li class="sendcarbox">
+                  		<h5 class="tt1">送车地址 <span>Send address</span></h5>
+                        <div class="add ma20"><textarea class="remarks"></textarea></div>
+                  </li>
+                  <li>
+                  		<h5 class="tt1">押金 <span>Money</span></h5>
+                        <div class="yajin ma20">5000元</div>
+                  </li>
+                  <li class="bornone" style="padding-top:10px;"><div class="ma20"><span class="btn tjdd">确定提交</span>  <span class="btn cxcl">重选车辆</span></div></li>
+                </ul>
+              </div>
+            </div>
+            <div class="widthcont ordercont3 hide">
+            	<!--<div class="tijiaowron tjbox hide">
+                	抱歉，请从新提交...
+                </div>-->
+            	<div class="tijiaook tjbox ">
+                	提交成功！等待审核...
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+<div class="push"></div>
+</div>
+<div class="footer">
+<div class="w1204 m">
+<div class="m" style="width:1000px;">
+	<div class="help fl">
+    	<h2 class="f_1">预订说明</h2>
+        <ul>
+        	<li><a href="/index/information/dibushuoming/2014/0114/14.html">用车时间</a></li>
+			<li><a href="/index/information/dibushuoming/2014/0114/16.html">关于预订
+</a></li>
+        </ul>
+    </div>
+    <div class="help fl">
+    	<h2 class="f_2">事务处理</h2>
+        <ul>
+        	<li><a href="/index/information/dibushuoming/2014/0114/13.html">用车须知</a></li>
+        </ul>
+    </div>
+    <div class="help fl">
+    	<h2 class="f_3">费用结算</h2>
+        <ul>
+        	<li><a href="/index/information/dibushuoming/2014/0114/15.html">关于费用</a></li>
+           
+			
+        </ul>
+    </div>
+    <div class="help fl">
+    	<h2 class="f_4">帮助中心</h2>
+        <ul>
+            <li><a href="/index/information/dibushuoming/2014/0114/18.html">常见问题</a></li>
+        </ul>
+    </div>
+    <div class="cb"></div>
+    <div class="copyright tc mt50">Copyright © 2013   车神集团  All rights reserved. 粤ICP备06000005号-1</div>
+    </div>
+</div>
+</div>
+
+
+<!-- 代码开始 -->
+<div id="code"></div>
+<div id="code_img"></div>
+<a id="gotop" href="javascript:void(0)"></a>
+<!-- 代码结束 -->
+<script src="/index/templets/default/js/weixin.js" type="text/javascript"></script>
+<script src="/index/templets/default/js/jquery.dataTables.js"></script>
+
+<script type="text/javascript" src="/index/templets/default/js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
+<script type="text/javascript" src="/index/templets/default/js/bootstrap-datetimepicker.zh-CN.js" charset="UTF-8"></script>
+<script src="/index/templets/default/js/orderlist.js" type="text/javascript"></script>
+</body>
+</html>

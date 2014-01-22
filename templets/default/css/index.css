@@ -75,6 +75,7 @@ _position:absolute;_bottom:auto;_top:expression(eval(document.documentElement.sc
 
 /* tipinfo */
 .tx1{font-size:12px; color:#666666}
+.tx1 input[type="radio"]{vertical-align:middle; margin:0 10px!important;}
 .inpu1{width:160px; line-height:30px; background: #FFFFFF; height:30px; border:1px solid #999;}
 .inpu2{width:150px; background:#efefef; height:22px; border:1px solid #999;}
 .tijiao1{background:url(../images/tijiao.jpg) no-repeat;width:209px!important;height:35px!important;border:none;cursor:pointer;}

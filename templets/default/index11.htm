@@ -10,76 +10,37 @@
 <body>
 {dede:include filename='head.htm'/}
 
-
+<div class="center">
 <!--首页banner轮播--> 
- 
-           <!--全屏幻灯片中部开始-->
-<script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/cn.ibehavior.jquery.js"></script>
-<style>
-.index_main{ width:100%; height:500px; background:none;}
-.index_main .image{ WIDTH: 100%; height:500px; margin: 0 auto;}
-.index_main .contr_image{ width:100%; height:35px; margin: 0 auto; background:url(/neo/templets/neo/pic/index/hw/contr_bg.jpg); text-align:center}
-
-#slide-index{min-width:1000px;width:auto; height:500px; overflow:hidden; position:relative;}
-#slide-index .slides{ min-width:1000px; width:auto; height:500px; }
-#slide-index .slide{ min-width:1000px; height:500px; float:left; position:relative; }
-#slide-index .image{ z-index:1;position:absolute; }
-#slide-index .text, #slide-index .button { z-index:2;position:absolute; top:-500px; }
-#slide-index .button{ display:none; width:138px;}
-
-#slide-index .control{ position:absolute; bottom:0px; width:100%; text-align:center; height:19px; cursor:pointer; z-index:40;}
-#slide-index .control a{ width:11px; height:11px; cursor:pointer; display:inline-block; background-repeat:no-repeat; background: #CCCCCC; margin-right:6px; opacity:0.6; filter:alpha(opacity=60); overflow:hidden;}
-#slide-index .control a:hover, #slide-index .control a.active{ background: #666666; opacity:1; filter:alpha(opacity=100);}
-
-.autoMaxWidth{ overflow:hidden; position:relative;height:232px; }
-.block div.header {padding:0 0 5px 0px;border-bottom:5px solid #F0F0F0;font-size:18px;line-height:22px;font-weight:bold;}
-.feedback div.header {color:#B60005;padding-top:10px;}
-.save_line{background:#E0E0E0 none repeat scroll 0 0;height:23px;margin:20px 11px 0 0;padding:5px 8px 5px 0;text-align:right;}
-.clear {clear: both;}
-</style>
-<div class="index_main">
-  <div class="videoList-container" id="pcList" style="margin-bottom: 0px; ">
-    <div id="slide-index" style="width: 1680px;">          
-	<div class="slides" style="width: 8400px; margin-left: -3360px;">
-		<div class="slide autoMaxWidth" style="width: 1680px;">	  		
-			<div class="image" id="bi_0"><a href="#" target=""><img  src="http://www.cheshen.com/index/uploads/allimg/131223/1-1312231631100-L.png" style="left: 458.5px; position: relative; width:1920px; height:500px;"></a></div>			
-			<div class="text" id="bt_0" style="left: 3000px; top: 86px;"></div>
-			<div class="button" id="bb_0" style="width: 138px; display: block; left: 3000px; top: 282px;"></div>
-		</div>
-		<div class="slide autoMaxWidth" style="width: 1680px;">	  		
-			<div class="image" id="bi_1"><a target="" href="#"><img  src="http://www.cheshen.com/index/uploads/allimg/131223/1-1312231631470-L.png" style="left: 458.5px; position: relative; width:1920px; height:500px;"></a>&nbsp;</div>			
-			<div class="text" id="bt_1" style="top: 46px; left: 3000px;"></div>
-			<div class="button" id="bb_1" style="display: block; width: 138px; top: 265px; left: 3000px;"></div>
-		</div>
-		<!--<div class="slide autoMaxWidth" style="width: 1680px;">	  		
-			<div class="image" id="bi_2"><a href="#" target="_blank"><img name="中泽品略" src="http://www.cheshen.com/index/uploads/allimg/131223/1-1312231631470-L.png" style="left: 458.5px; position: relative;"></a>&nbsp;</div>			
-			<div class="text" id="bt_2" style="top: 81px; left: 370px;"></div>
-			<div class="button" id="bb_2" style="display: block; top: 244px; left: 370px;"></div>
-		</div>
-	<div class="slide autoMaxWidth" style="width: 1680px;">	  		
-			<div class="image" id="bi_0"><a href="#" target="_blank"><img name="中泽品略" src="http://www.cheshen.com/index/uploads/allimg/131223/1-1312231631470-L.png" style="left: 458.5px; position: relative;"></a></div>			
-			<div class="text" id="bt_0" style="left: 3000px; top: 81px;"></div>
-			<div class="button" id="bb_0" style="display: block; width: 138px; left: 3000px; top: 244px;"></div>
-		</div>
-		-->
-	      </div>
-	    <div class="control">
-		<a href="" class=""></a>
-		<a href="" class=""></a>
-	<!--	<a href="" class="active"></a>
-		<a href="" class=""></a>-->
-	   </div>
-     </div>			
-    </div>
-
-<script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/cn.global.js"></script>
-
-</div>
-<!--全屏幻灯片结束-->     
-              
-
+    <div class="carousel slide" id="myCarousel">
+                
+                <div class="carousel-inner">
+                {dede:arclist typeid='1' row='2' imgwidth='1920' imgheight='500'}
+                  <div class="item"  onclick="getPage('http://v.qq.com/iframe/player.html?vid=h01188adjg6&width=600&height=400&auto=0','vedio')">
+                    [field:image/]
+                    <!--图片文字描述-->
+                    <!--<div class="carousel-caption">
+                      <h4>First Thumbnail label</h4>
+                      <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                    </div>-->
+                  </div>
+                {/dede:arclist}
+                </div>
+                <a data-slide="prev" href="#myCarousel" class="left carousel-control">‹</a>
+                <a data-slide="next" href="#myCarousel" class="right carousel-control">›</a>
+                
+                <!--首页新闻中心-->    
+   <!-- <div class="news">
+    	<div style="height:30px;"><a href="#" class="fr mr15 mt5"><img src="{dede:global.cfg_templets_skin/}/images/home_n.png" /></a></div>
+        <ul class="f12 tl" style="margin:0 auto;">
+        	{dede:arclist typeid='6' row='6' titlelen='24'}
+        	<li><a href="[field:arcurl/]">[field:title/]...<span>[field:pubdate function=strftime('%y/%m/%d/',@me)/]</span></a></li>
+            {/dede:arclist}
+        </ul>
+    </div>-->
+              </div> 
    
-  <div class="center">  
+    
 
     
     

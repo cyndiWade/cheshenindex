@@ -81,7 +81,6 @@
 			 'password' : pas
 			},function(obj){
 				if (obj.status == 0) {
-					alert(obj.msg);
 					Cookie.setCookie("user_key",obj.data.user_key);	//设置Cookie值
 					Cookie.setCookie("account",obj.data.account);	 
 					Cookie.setCookie("nickname",obj.data.nickname);	

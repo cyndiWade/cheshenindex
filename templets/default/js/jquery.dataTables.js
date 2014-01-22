@@ -930,8 +930,8 @@
 			 */
 			this.oLanguage = {
 				"sProcessing": "处理中...",
-				"sLengthMenu": "显示_订单",
-				"sZeroRecords": "没有相关订单",
+				"sLengthMenu": "显示",
+				"sZeroRecords": "没有找到",
 				"sEmptyTable": "没有数据",
 				"sLoadingRecords": "等待中...",
 				"sInfo": " _START_ - _END_ 共 _TOTAL_ 条 ",
@@ -939,7 +939,7 @@
 				"sInfoFiltered": "(过滤 _MAX_ 条)",
 				"sInfoPostFix": "",
 				"sInfoThousands": ",",
-				"sSearch": "Search:",
+				"sSearch": "搜索:",
 				"sUrl": "",
 				"oPaginate": {
 					"sFirst":    "首页",
